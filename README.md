@@ -1,16 +1,17 @@
-# r6t1
+# Sojourner
+This repo contains the data and configuration for http://sojourner.netlify.app, a website concept for a company specializing in space tourism and interstellar travel. 🚀
 
-## Project setup
+To set it up, use:
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Development
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Production
 ```
 npm run build
 ```
