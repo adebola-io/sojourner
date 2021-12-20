@@ -1,26 +1,59 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Header
+    :headerLinks="links"
+    @toggle-drop-down="toggleDropDown"
+    text="Sojourner"
+  >
+  </Header>
+  <Sidebar :dropDownLinks="links" :showDropDown="showDropDown"></Sidebar>
+  <router-view></router-view>
+  <Footer></Footer>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Header from "./global/Header/Header";
+import Sidebar from "./global/Sidebar/Sidebar";
+import Footer from "./global/Footer/Footer";
+import "./fonts/fonts.css";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Header,
+    Sidebar,
+    Footer,
+  },
+  data() {
+    return {
+      showDropDown: false,
+      links: [
+        { name: "Home", to: "/" },
+        { name: "Popular", to: "/popular" },
+        { name: "Search", to: "/search" },
+        { name: "News", to: "/news" },
+        { name: "About Us", to: "/about-us" },
+        { name: "Contact", to: "/contact-us" },
+      ],
+    };
+  },
+  methods: {
+    toggleDropDown() {
+      this.showDropDown = !this.showDropDown;
+    },
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  margin: 0;
+}
+main {
+  margin-top: 50px;
+}
+:root {
+  background-color: black;
+  color: white;
+  --themeColor: #ae9760;
+  font-family: "Segoe-UI", Arial, sans-serif;
 }
 </style>
