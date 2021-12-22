@@ -1,7 +1,7 @@
 <template>
   <li
     class="popular-item-container"
-    :style="{ animation: `popular-item ${isReadyValue * 300}ms` }"
+    :style="{ animation: `popular-item ${(isReadyValue + 1) * 300}ms` }"
   >
     <router-link
       to="#"
@@ -26,7 +26,6 @@ export default {
 <style scoped>
 .popular-item-container {
   height: 200px;
-  width: 100%;
   overflow: hidden;
   border: 1px solid var(--themeColor);
   list-style: none;
@@ -74,5 +73,15 @@ h2 {
   text-transform: uppercase;
   font-weight: bold;
   text-decoration: none;
+}
+@media (min-width: 768px) {
+  .popular-item-container {
+    height: 85%;
+    width: 345px;
+    margin-right: 30px;
+  }
+  .popular-item-container:hover {
+    transform: scale(1.07);
+  }
 }
 </style>
