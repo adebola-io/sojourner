@@ -25,9 +25,9 @@ export default {
     return {
       height: window.innerHeight - 50,
       overlays: [
-        require("../assets/venus.jpg"),
-        require("../assets/moon.jpg"),
-        require("../assets/earth.jpg"),
+        require("../../../assets/planets/venus.jpg"),
+        require("../../../assets/planets/moon.jpg"),
+        require("../../../assets/planets/earth.jpg"),
       ],
       opacities: [0, 0, 1],
     };

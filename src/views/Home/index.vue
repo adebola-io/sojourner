@@ -36,9 +36,9 @@ export default {
   },
   data() {
     return {
-      earth: require("./assets/earth.jpg"),
-      venus: require("./assets/venus.jpg"),
-      moon: require("./assets/moon.jpg"),
+      earth: require("../../assets/planets/earth.jpg"),
+      venus: require("../../assets/planets/venus.jpg"),
+      moon: require("../../assets/planets/moon.jpg"),
     };
   },
   created() {

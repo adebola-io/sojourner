@@ -1,11 +1,20 @@
 <template>
   <Header
+    :current="current"
     :headerLinks="links"
+    @go="selectRoute"
     @toggle-drop-down="toggleDropDown"
+    :showDropDown="showDropDown"
+    :rotation="showDropDown ? -180 : 0"
     text="Sojourner"
   >
   </Header>
-  <Sidebar :dropDownLinks="links" :showDropDown="showDropDown"></Sidebar>
+  <Sidebar
+    :current="current"
+    :dropDownLinks="links"
+    :showDropDown="showDropDown"
+    @close-side-bar="closeSb"
+  ></Sidebar>
   <router-view></router-view>
   <Footer></Footer>
 </template>
@@ -25,19 +34,26 @@ export default {
   data() {
     return {
       showDropDown: false,
+      current: window.location.pathname,
       links: [
         { name: "Home", to: "/" },
         { name: "Popular", to: "/popular" },
-        { name: "Search", to: "/search" },
         { name: "News", to: "/news" },
         { name: "About Us", to: "/about-us" },
-        { name: "Contact", to: "/contact-us" },
+        { name: "Contact", to: "/contact" },
       ],
     };
   },
   methods: {
     toggleDropDown() {
       this.showDropDown = !this.showDropDown;
+    },
+    closeSb(to) {
+      this.showDropDown = false;
+      this.selectRoute(to);
+    },
+    selectRoute(to) {
+      this.current = to;
     },
   },
 };

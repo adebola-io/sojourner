@@ -4,8 +4,10 @@
     class="header-drop-down"
   >
     <DropDownLink
+      :current="current"
       v-for="(dropDownLink, index) in dropDownLinks"
       :key="index"
+      @close-side-bar="closeSidebar"
       :to="dropDownLink.to"
       :name="dropDownLink.name"
     />
@@ -20,7 +22,13 @@ export default {
   },
   props: {
     showDropDown: Boolean,
+    current: String,
     dropDownLinks: Array,
+  },
+  methods: {
+    closeSidebar(to) {
+      this.$emit("close-side-bar", to);
+    },
   },
 };
 </script>

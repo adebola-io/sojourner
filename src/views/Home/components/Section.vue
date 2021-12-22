@@ -75,7 +75,7 @@ section {
   text-transform: uppercase;
   color: var(--themeColor);
   /*font-family: "Space-Madness", monospace, sans-serif;*/
-  font-family: RNS, Arial, sans-serif;
+  font-family: Space-Madness, Arial, sans-serif;
   font-size: 25pt;
 }
 @media (min-width: 768px) {

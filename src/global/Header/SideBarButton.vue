@@ -1,5 +1,9 @@
 <template>
-  <button @click="toggleDropDown" class="side-bar-btn">
+  <button
+    @click="toggleDropDown"
+    class="side-bar-btn"
+    :style="{ transform: `rotate(${rotation}deg)` }"
+  >
     <div
       :style="{
         transform: `${
@@ -26,15 +30,13 @@
 <script>
 export default {
   name: "SideBarButton",
-  data() {
-    return {
-      showDropDown: false,
-    };
+  props: {
+    showDropDown: Boolean,
+    rotation: Number,
   },
   methods: {
     toggleDropDown() {
       this.$emit("toggle-drop-down");
-      this.showDropDown = !this.showDropDown;
     },
   },
 };
@@ -51,6 +53,7 @@ export default {
   cursor: pointer;
   background-color: transparent;
   border: none;
+  transition-duration: 450ms;
 }
 @media (min-width: 768px) {
   .side-bar-btn {

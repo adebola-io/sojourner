@@ -1,4 +1,4 @@
-export default spacecrafts = [
+const spacecrafts = [
   {
     name: "Ajala-C6G3",
   },
@@ -24,3 +24,5 @@ export default spacecrafts = [
     name: "The Iron Bubble",
   },
 ];
+
+export default spacecrafts;

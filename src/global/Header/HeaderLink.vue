@@ -1,6 +1,12 @@
 <template>
   <li>
-    <router-link :to="`${to}`" class="header-link">{{ name }}</router-link>
+    <router-link
+      :to="`${to}`"
+      class="header-link"
+      @click="selectRoute"
+      :style="{ color: `${to === current ? 'white' : 'var(--themeColor)'}` }"
+      >{{ name }}</router-link
+    >
   </li>
 </template>
 
@@ -10,6 +16,12 @@ export default {
   props: {
     name: String,
     to: String,
+    current: String,
+  },
+  methods: {
+    selectRoute() {
+      this.$emit("go", this.to);
+    },
   },
 };
 </script>

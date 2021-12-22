@@ -1,8 +1,12 @@
 <template>
   <li>
-    <router-link :to="`${to}`" class="header-drop-down-link">{{
-      name
-    }}</router-link>
+    <router-link
+      @click="closeSideBar"
+      :to="`${to}`"
+      class="header-drop-down-link"
+      :style="{ color: `${to === current ? 'white' : 'var(--themeColor)'}` }"
+      >{{ name }}</router-link
+    >
   </li>
 </template>
 
@@ -12,6 +16,12 @@ export default {
   props: {
     name: String,
     to: String,
+    current: String,
+  },
+  methods: {
+    closeSideBar() {
+      this.$emit("close-side-bar", this.to);
+    },
   },
 };
 </script>
@@ -26,5 +36,8 @@ li {
   font-size: 11pt;
   font-family: RNS, Arial, sans-serif;
   color: var(--themeColor);
+}
+.header-drop-down-link:hover {
+  color: white;
 }
 </style>

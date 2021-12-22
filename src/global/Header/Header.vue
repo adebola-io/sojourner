@@ -5,13 +5,19 @@
       <ul>
         <HeaderLink
           v-for="(headerLink, index) in headerLinks"
+          @go="selectRoute"
           :key="index"
+          :current="current"
           :to="headerLink.to"
           :name="headerLink.name"
         />
       </ul>
     </nav>
-    <SideBarButton @toggle-drop-down="toggleDropDown" />
+    <SideBarButton
+      :showDropDown="showDropDown"
+      :rotation="rotation"
+      @toggle-drop-down="toggleDropDown"
+    />
   </header>
 </template>
 
@@ -23,6 +29,9 @@ export default {
   props: {
     text: String,
     headerLinks: Array,
+    showDropDown: Boolean,
+    rotation: Number,
+    current: String,
   },
   components: {
     SideBarButton,
@@ -32,13 +41,14 @@ export default {
     toggleDropDown() {
       this.$emit("toggle-drop-down");
     },
+    selectRoute(to) {
+      this.$emit("go", to);
+    },
   },
 };
 </script>
 
 <style scoped>
-.header-container {
-}
 header {
   position: fixed;
   top: 0;
