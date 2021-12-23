@@ -14,16 +14,34 @@
           :key="index"
         />
       </ul>
-      <div class="p-destinations-scrollbuttons">
-        <button @click="log" class="p-destinations-scrollbuttons-backward">
-          <div class="p-destinations-scrollbuttons-b2"></div>
-          <div class="p-destinations-scrollbuttons-b1"></div>
-        </button>
-        <button @click="log" class="p-destinations-scrollbuttons-forward">
-          <div class="p-destinations-scrollbuttons-b1"></div>
-          <div class="p-destinations-scrollbuttons-b2"></div>
-        </button>
-      </div>
+      <button
+        @click="
+          () => {
+            this.shiftLineup('back');
+          }
+        "
+        class="p-destinations-scrollbuttons-backward"
+        :style="{
+          display: `${outerContainerXTranslation > 0 ? 'flex' : 'none'}`,
+        }"
+      >
+        <div class="p-destinations-scrollbuttons-b2"></div>
+        <div class="p-destinations-scrollbuttons-b1"></div>
+      </button>
+      <button
+        @click="
+          () => {
+            this.shiftLineup('front');
+          }
+        "
+        class="p-destinations-scrollbuttons-forward"
+        :style="{
+          display: `${outerContainerXTranslation < 5 ? 'flex' : 'none'}`,
+        }"
+      >
+        <div class="p-destinations-scrollbuttons-b1"></div>
+        <div class="p-destinations-scrollbuttons-b2"></div>
+      </button>
     </div>
   </main>
 </template>
@@ -44,8 +62,11 @@ export default {
     };
   },
   methods: {
-    log() {
-      if (this.outerContainerXTranslation < 5)
+    shiftLineup(direction = "") {
+      if (direction === "back" && this.outerContainerXTranslation > 0) {
+        this.outerContainerXTranslation--;
+      }
+      if (direction === "front" && this.outerContainerXTranslation < 5)
         this.outerContainerXTranslation++;
     },
   },
@@ -62,7 +83,9 @@ main {
   height: fit-content;
 }
 h1 {
+  width: 97%;
   margin-left: 3%;
+  text-align: center;
   color: var(--themeColor);
   font-family: RNS, Arial, sans-serif;
 }
@@ -73,7 +96,6 @@ h1 {
 }
 ul {
   display: grid;
-  grid-template-columns: 47% 47%;
   column-gap: 6%;
   row-gap: 18px;
   padding: 0;
@@ -87,6 +109,7 @@ ul {
   }
   h1 {
     height: 0;
+    text-align: justify;
   }
   .p-destinations-outer-container {
     height: 100%;
@@ -99,18 +122,10 @@ ul {
   .p-destinations-outer-container::-webkit-scrollbar {
     display: none;
   }
-  .p-destinations-scrollbuttons {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    background: transparent;
-    transform: translateY(-100%);
-    scroll-behavior: smooth;
-  }
   .p-destinations-scrollbuttons-forward,
   .p-destinations-scrollbuttons-backward {
+    position: fixed;
+    bottom: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,6 +137,9 @@ ul {
     opacity: 0.75;
     cursor: pointer;
     transition-duration: 300ms;
+  }
+  .p-destinations-scrollbuttons-forward {
+    right: 0;
   }
   .p-destinations-scrollbuttons-forward:hover,
   .p-destinations-scrollbuttons-backward:hover {

@@ -10,6 +10,12 @@
     >
       <div class="popular-item-info">
         <h2>{{ item.name }}</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore harum
+          tempora ducimus quasi modi, est amet sint nobis magni incidunt
+          deleniti deserunt dicta in maxime rerum veniam voluptatem assumenda
+          quia.
+        </p>
       </div>
     </router-link>
   </li>
@@ -25,7 +31,7 @@ export default {
 </script>
 <style scoped>
 .popular-item-container {
-  height: 200px;
+  height: 350px;
   overflow: hidden;
   border: 1px solid var(--themeColor);
   list-style: none;
@@ -49,13 +55,15 @@ export default {
 }
 .popular-item-info {
   display: flex;
-  /* flex-direction: column; */
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
+  flex-direction: column;
   background-image: linear-gradient(0deg, black, transparent);
-  /* background-color: var(--themeColor); */
   width: 100%;
-  height: 25%;
+  height: 100%;
+}
+p {
+  display: none;
 }
 h2 {
   margin: 0;
@@ -82,6 +90,24 @@ h2 {
   }
   .popular-item-container:hover {
     transform: scale(1.07);
+  }
+  h2 {
+    height: 10%;
+    transform: translateY(450%);
+  }
+  p {
+    display: block;
+    height: 50%;
+    margin: 0;
+    text-align: center;
+    font-size: 11pt;
+    color: white;
+    transform: translateY(100%);
+  }
+}
+@media (max-width: 375px) {
+  .popular-item-container {
+    height: 200px;
   }
 }
 </style>
