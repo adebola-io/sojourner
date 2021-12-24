@@ -4,18 +4,14 @@
     :style="{ animation: `popular-item ${(isReadyValue + 1) * 300}ms` }"
   >
     <router-link
-      to="#"
+      :to="item.page"
       class="popular-item"
-      :style="{ backgroundImage: `url(${item.background})` }"
+      :style="{
+        backgroundImage: `url('${backgroundURL}')`,
+      }"
     >
       <div class="popular-item-info">
         <h2>{{ item.name }}</h2>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore harum
-          tempora ducimus quasi modi, est amet sint nobis magni incidunt
-          deleniti deserunt dicta in maxime rerum veniam voluptatem assumenda
-          quia.
-        </p>
       </div>
     </router-link>
   </li>
@@ -26,12 +22,18 @@ export default {
   props: {
     item: Object,
     isReadyValue: Number,
+    backgroundURL: String,
+  },
+  data() {
+    return {
+      background: require("../../../assets/blank.jpg"),
+    };
   },
 };
 </script>
 <style scoped>
 .popular-item-container {
-  height: 350px;
+  height: 250px;
   overflow: hidden;
   border: 1px solid var(--themeColor);
   list-style: none;
@@ -61,9 +63,7 @@ export default {
   background-image: linear-gradient(0deg, black, transparent);
   width: 100%;
   height: 100%;
-}
-p {
-  display: none;
+  padding-bottom: 10%;
 }
 h2 {
   margin: 0;
@@ -71,7 +71,8 @@ h2 {
   color: var(--themeColor);
   /* text-transform: uppercase; */
   text-align: center;
-  font-family: RNS, Arial, sans-serif;
+  /* font-family: RNS, Arial, sans-serif; */
+  font-family: Altone, Arial, Helvetica, sans-serif;
 }
 .visit-link {
   padding: 12px 40px;
@@ -87,22 +88,15 @@ h2 {
     height: 85%;
     width: 345px;
     margin-right: 30px;
+    --infoTransform: translateY(100%);
   }
   .popular-item-container:hover {
     transform: scale(1.07);
+    --infoTransform: translateY(0);
   }
   h2 {
     height: 10%;
-    transform: translateY(450%);
-  }
-  p {
-    display: block;
-    height: 50%;
-    margin: 0;
-    text-align: center;
-    font-size: 11pt;
-    color: white;
-    transform: translateY(100%);
+    transition-duration: 300ms;
   }
 }
 @media (max-width: 375px) {

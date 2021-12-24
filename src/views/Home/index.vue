@@ -3,24 +3,22 @@
   <main>
     <Section
       format="left"
-      heading="Explore outer space."
+      heading="The No. 1 Interstellar Agency in the Galaxy."
       action="Get Started"
-      text="Join our crews on an exciting journey across galaxies, traversing
+      text="Sojourner is a company dedicated to getting you to where you want to be in style and safety. Join our crews on an exciting journey across space, traversing
           realities at previously unimagined speeds."
     ></Section>
     <Section
       format="middle"
-      heading="Experience the Solar System."
+      heading="Experience the Solar System with us."
       action="Sign Up."
-      text="Want to walk on the red sands of Mars? Feel the cold Europan winds on 
-          your face? Or feel moongrass between your fingers? We've got you covered."
+      text="Want to walk on the red sands of Mars? Feel the cold winds of Europa on your face? Or feel moongrass between your fingers? We've got you covered."
     ></Section>
     <Section
       format="right"
-      heading="Expand your horizon."
+      heading="Expand your horizon and explore the universe."
       action="Learn More."
-      text="Reach beyond the limits of the nature and into the depths of reality
-          , breaking boundaries and redefining possibilities."
+      text="Reach beyond the limits of the nature and into the depths of reality, breaking boundaries and redefining possibilities."
     ></Section>
   </main>
 </template>
@@ -33,13 +31,6 @@ export default {
   components: {
     Section,
     Overlays,
-  },
-  data() {
-    return {
-      earth: require("../../assets/planets/earth.jpg"),
-      venus: require("../../assets/planets/venus.jpg"),
-      moon: require("../../assets/planets/moon.jpg"),
-    };
   },
   created() {
     document.title = "Sojouner - Home";

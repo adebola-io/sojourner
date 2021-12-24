@@ -11,6 +11,11 @@
           v-for="(item, index) in popular"
           :isReadyValue="index"
           :item="item"
+          :backgroundURL="
+            item
+              ? require(`../../assets/planets/${item.background}`)
+              : require('../../assets/blank.jpg')
+          "
           :key="index"
         />
       </ul>
@@ -20,10 +25,8 @@
             this.shiftLineup('back');
           }
         "
+        v-if="outerContainerXTranslation > 0"
         class="p-destinations-scrollbuttons-backward"
-        :style="{
-          display: `${outerContainerXTranslation > 0 ? 'flex' : 'none'}`,
-        }"
       >
         <div class="p-destinations-scrollbuttons-b2"></div>
         <div class="p-destinations-scrollbuttons-b1"></div>
@@ -34,10 +37,8 @@
             this.shiftLineup('front');
           }
         "
+        v-if="outerContainerXTranslation < 5"
         class="p-destinations-scrollbuttons-forward"
-        :style="{
-          display: `${outerContainerXTranslation < 5 ? 'flex' : 'none'}`,
-        }"
       >
         <div class="p-destinations-scrollbuttons-b1"></div>
         <div class="p-destinations-scrollbuttons-b2"></div>
@@ -47,7 +48,6 @@
 </template>
 
 <script>
-import Data from "../../data";
 import PDestination from "./components/PDestination";
 import "./animations.css";
 export default {
@@ -57,6 +57,7 @@ export default {
   },
   data() {
     return {
+      popular: [],
       height: `${window.innerHeight - 80}px`,
       outerContainerXTranslation: 0,
     };
@@ -73,7 +74,13 @@ export default {
   created() {
     document.title = "Sojourner - Popular Destinations";
     document.body.style.setProperty("--popular-main-height", this.height);
-    this.popular = Data.popular;
+    fetch("/api/destinations")
+      .then((res) => res.json())
+      .then((data) => {
+        this.popular = data.sort((a, b) => {
+          return b.visited - a.visited;
+        });
+      });
   },
 };
 </script>
@@ -87,7 +94,7 @@ h1 {
   margin-left: 3%;
   text-align: center;
   color: var(--themeColor);
-  font-family: RNS, Arial, sans-serif;
+  font-family: Altone, Arial, Helvetica, sans-serif;
 }
 .p-destinations-outer-container {
   width: 96%;
@@ -96,11 +103,13 @@ h1 {
 }
 ul {
   display: grid;
+  grid-template-columns: 47% 47%;
   column-gap: 6%;
   row-gap: 18px;
   padding: 0;
 }
-.p-destinations-scrollbuttons {
+.p-destinations-scrollbuttons-forward,
+.p-destinations-scrollbuttons-backward {
   display: none;
 }
 @media (min-width: 768px) {

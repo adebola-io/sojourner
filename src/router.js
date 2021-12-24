@@ -5,6 +5,7 @@ import Destinations from "./views/Destinations/index";
 import News from "./views/News/index";
 import About from "./views/About/index";
 import Contact from "./views/Contact/index";
+import PlanetPage from "./views/PlanetPage/index";
 
 const routes = [
   {
@@ -36,6 +37,12 @@ const routes = [
     path: "/about-us",
     name: "About",
     component: About,
+  },
+  {
+    path: "/destinations/:planetID",
+    name: "PlanetPage",
+    component: PlanetPage,
+    props: true,
   },
 ];
 

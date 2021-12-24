@@ -1,6 +1,15 @@
 <template>
   <header>
-    <router-link class="header-text" to="/">{{ text }}</router-link>
+    <router-link
+      @click="
+        () => {
+          selectRoute('/');
+        }
+      "
+      class="header-text"
+      to="/"
+      >{{ text }}</router-link
+    >
     <nav>
       <ul>
         <HeaderLink
@@ -70,6 +79,7 @@ header {
   margin-right: auto;
   /*font-family: Space-Madness, monospace, Arial, sans-serif*/
   font-family: RNS, Arial, sans-serif;
+  /* font-family: Altone, Arial, Helvetica, sans-serif; */
 }
 @media (max-width: 768px) {
   nav {

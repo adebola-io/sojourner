@@ -34,7 +34,8 @@ li {
 .header-link {
   text-decoration: none;
   font-size: 11pt;
-  font-family: RNS, Arial, sans-serif;
+  /* font-family: RNS, Arial, sans-serif; */
+  font-family: Altone, Arial, Helvetica, sans-serif;
   color: var(--themeColor);
 }
 .header-link:hover {

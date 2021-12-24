@@ -72,10 +72,8 @@ section {
 .center-heading {
   width: 75%;
   margin-bottom: 0;
-  text-transform: uppercase;
   color: var(--themeColor);
-  /*font-family: "Space-Madness", monospace, sans-serif;*/
-  font-family: Space-Madness, Arial, sans-serif;
+  font-family: Altone;
   font-size: 25pt;
 }
 @media (min-width: 768px) {
@@ -83,6 +81,7 @@ section {
   .left-heading,
   .center-heading {
     font-size: 32pt;
+    width: 50%;
   }
 }
 .right-heading,
@@ -99,12 +98,15 @@ section {
   width: 75%;
   font-size: 11pt;
   margin-top: 8px;
+  color: #f0f0f0;
+  font-family: Altone, Arial, sans-serif;
 }
 @media (min-width: 768px) {
   .right-text,
   .left-text,
   .center-text {
     width: 40%;
+    font-size: 13pt;
   }
 }
 .action-button {

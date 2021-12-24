@@ -66,10 +66,15 @@ body {
 main {
   margin-top: 50px;
 }
+html::-webkit-scrollbar {
+  display: none;
+}
 :root {
   background-color: black;
   color: white;
-  --themeColor: #ae9760;
-  font-family: "Segoe-UI", Arial, sans-serif;
+  /* --themeColor: #ae9760; */
+  /* --themeColor: #eda885; */
+  --themeColor: #a9c9e5;
+  font-family: Altone, Arial, Helvetica, sans-serif;
 }
 </style>
