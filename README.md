@@ -1,18 +1,25 @@
 # Sojourner
 
-This repo contains the data and configuration for http://sojourner.netlify.app, a website concept for a company specializing in space tourism and interstellar travel. 🚀
+This repo contains the data and configuration for [Sojourner](https://sojourner.netlify.app), a website concept for a company specializing in space tourism and interstellar travel. 🚀
 
-To set it up dependencies, use:
+To set up its dependencies, use:
 ```
 npm install
 ```
 
 ### Development
+To start dev server, use:
 ```
 npm run serve
 ```
 
+To start json server/fake rest api, use :
+```
+npm run json
+```
+
 ### Production
+To build for production, use:
 ```
 npm run build
 ```
