@@ -1,7 +1,10 @@
 <template>
   <li
     class="popular-item-container"
-    :style="{ animation: `popular-item ${(isReadyValue + 1) * 300}ms` }"
+    :style="{
+      animation: `popular-item ${(isReadyValue + 1) * 300}ms`,
+      border: `2px solid ${item.themeColor || `var(--themeColor)`}`,
+    }"
   >
     <router-link
       :to="item.page"
@@ -35,8 +38,8 @@ export default {
 .popular-item-container {
   height: 250px;
   overflow: hidden;
-  border: 1px solid var(--themeColor);
   list-style: none;
+  border-radius: 9px;
   transition-duration: 300ms;
   animation: popular-item 300ms;
 }
