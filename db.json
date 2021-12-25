@@ -1,10 +1,10 @@
 {
   "destinations": [
     {
-      "id": "3",
+      "id": 3,
       "name": "Mars",
       "info": "Mars is the seventh largest in our solar system and the Earth's smaller, colder neighbour. It contains the largest extra-terrestrial human population, with engineered valleys and beautiful sceneries. ",
-      "visited": "125435823",
+      "visited": 125435823,
       "background": "mars-3.jpg",
       "themeColor": "#d65f00",
       "page": "/destinations/3",
@@ -461,10 +461,10 @@
       ]
     },
     {
-      "id": "1",
+      "id": 1,
       "name": "Luna",
       "info": "Luna, formally known as the Moon, is the Earth's only natural satellite, and the fifth largest in the Solar system, containing the second largest population of humans outside Earth.",
-      "visited": "292415886",
+      "visited": 292415886,
       "background": "moon.jpg",
       "themeColor": "grey",
       "page": "/destinations/1",
@@ -619,13 +619,293 @@
           "durationInMonths": 0,
           "category": "Economy",
           "ticketPrice": 1399.99
+        },
+        {
+          "from": "Silverline Spaceport, Gangtok",
+          "country": "India",
+          "to": "United International Spaceport, Lunaria.",
+          "carrier": "Moonmetal Elite",
+          "seatsAvailable": 12,
+          "departure": {
+            "time": {
+              "hours": 10,
+              "min": 0
+            },
+            "day": 7,
+            "month": "November",
+            "year": 2072
+          },
+          "arrival": {
+            "time": {
+              "hours": 10,
+              "min": 30
+            },
+            "day": 10,
+            "month": "November",
+            "year": 2072
+          },
+          "durationInMonths": 0,
+          "category": "First Class",
+          "ticketPrice": 4199.99
+        },
+        {
+          "from": "New Lunar Spaceport, Kobe",
+          "country": "Japan",
+          "to": "Armstrong Interstellar Spaceport, Lunaria.",
+          "carrier": "Faraday's Flyer II-AA7",
+          "seatsAvailable": 281,
+          "departure": {
+            "time": {
+              "hours": 13,
+              "min": 30
+            },
+            "day": 25,
+            "month": "January",
+            "year": 2073
+          },
+          "arrival": {
+            "time": {
+              "hours": 15,
+              "min": 0
+            },
+            "day": 29,
+            "month": "January",
+            "year": 2073
+          },
+          "durationInMonths": 0,
+          "category": "Economy",
+          "ticketPrice": 1999.99
+        },
+        {
+          "from": "Stardragon Spaceport, Shenzhen",
+          "country": "China",
+          "to": "Armstrong Interstellar Spaceport, Lunaria.",
+          "carrier": "Chinese Aeroways",
+          "seatsAvailable": 911,
+          "departure": {
+            "time": {
+              "hours": 6,
+              "min": 45
+            },
+            "day": 19,
+            "month": "February",
+            "year": 2073
+          },
+          "arrival": {
+            "time": {
+              "hours": 10,
+              "min": 30
+            },
+            "day": 22,
+            "month": "February",
+            "year": 2073
+          },
+          "durationInMonths": 0,
+          "category": "Economy",
+          "ticketPrice": 1399.99
+        },
+        {
+          "from": "International Spaceport, Phoenix",
+          "country": "USA",
+          "to": "New Moon Spaceport, Palerock SSC",
+          "carrier": "Nebula 7",
+          "seatsAvailable": 1722,
+          "departure": {
+            "time": {
+              "hours": 9,
+              "min": 45
+            },
+            "day": 8,
+            "month": "January",
+            "year": 2072
+          },
+          "arrival": {
+            "time": {
+              "hours": 11,
+              "min": 30
+            },
+            "day": 12,
+            "month": "January",
+            "year": 2072
+          },
+          "durationInMonths": 0,
+          "category": "Economy",
+          "ticketPrice": 1699.99
+        },
+        {
+          "from": "Aakaash Raaja Spaceport, Pune",
+          "country": "India",
+          "to": "Armstrong Interstellar Spaceport, Lunaria.",
+          "carrier": "Golden Bird Y52",
+          "seatsAvailable": 2625,
+          "departure": {
+            "time": {
+              "hours": 12,
+              "min": 0
+            },
+            "day": 15,
+            "month": "March",
+            "year": 2073
+          },
+          "arrival": {
+            "time": {
+              "hours": 19,
+              "min": 30
+            },
+            "day": 18,
+            "month": "March",
+            "year": 2073
+          },
+          "durationInMonths": 0,
+          "category": "Economy",
+          "ticketPrice": 1799.99
+        },
+        {
+          "from": "Stardragon Spaceport, Shenzhen",
+          "country": "China",
+          "to": "Armstrong Interstellar Spaceport, Lunaria.",
+          "carrier": "Moonmetal T72",
+          "seatsAvailable": 1043,
+          "departure": {
+            "time": {
+              "hours": 9,
+              "min": 45
+            },
+            "day": 16,
+            "month": "December",
+            "year": 2072
+          },
+          "arrival": {
+            "time": {
+              "hours": 11,
+              "min": 30
+            },
+            "day": 19,
+            "month": "December",
+            "year": 2072
+          },
+          "durationInMonths": 0,
+          "category": "Economy",
+          "ticketPrice": 1499.99
+        },
+        {
+          "from": "Aderonu Adelaja Spaceport, Abeokuta",
+          "country": "Nigeria",
+          "to": "New Moon Spaceport, Palerock SSC",
+          "carrier": "IkemAstro 992",
+          "seatsAvailable": 1137,
+          "departure": {
+            "time": {
+              "hours": 15,
+              "min": 0
+            },
+            "day": 30,
+            "month": "January",
+            "year": 2073
+          },
+          "arrival": {
+            "time": {
+              "hours": 13,
+              "min": 30
+            },
+            "day": 3,
+            "month": "February",
+            "year": 2073
+          },
+          "durationInMonths": 0,
+          "category": "Economy",
+          "ticketPrice": 1899.99
+        },
+        {
+          "from": "NNSP, Calabar.",
+          "country": "Nigeria",
+          "to": "United International Spaceport, Lunaria.",
+          "carrier": "IkemAstro 145",
+          "seatsAvailable": 222,
+          "departure": {
+            "time": {
+              "hours": 14,
+              "min": 45
+            },
+            "day": 9,
+            "month": "January",
+            "year": 2073
+          },
+          "arrival": {
+            "time": {
+              "hours": 19,
+              "min": 0
+            },
+            "day": 12,
+            "month": "January",
+            "year": 2073
+          },
+          "durationInMonths": 0,
+          "category": "Economy",
+          "ticketPrice": 1399.99
+        },
+        {
+          "from": "International Spaceport, Phoenix",
+          "country": "USA",
+          "to": "Armstrong Interstellar Spaceport, Lunaria.",
+          "carrier": "Babylon-D898",
+          "seatsAvailable": 4138,
+          "departure": {
+            "time": {
+              "hours": 12,
+              "min": 0
+            },
+            "day": 20,
+            "month": "December",
+            "year": 2072
+          },
+          "arrival": {
+            "time": {
+              "hours": 11,
+              "min": 30
+            },
+            "day": 24,
+            "month": "December",
+            "year": 2072
+          },
+          "durationInMonths": 0,
+          "category": "Economy",
+          "ticketPrice": 1199.99
+        },
+        {
+          "from": "Yagarin Spaceport, Yekaterinburg",
+          "country": "Russia",
+          "to": "United International Spaceport, Lunaria.",
+          "carrier": "The Scarlet Star",
+          "seatsAvailable": 1920,
+          "departure": {
+            "time": {
+              "hours": 10,
+              "min": 0
+            },
+            "day": 29,
+            "month": "November",
+            "year": 2072
+          },
+          "arrival": {
+            "time": {
+              "hours": 1,
+              "min": 30
+            },
+            "day": 2,
+            "month": "December",
+            "year": 2072
+          },
+          "durationInMonths": 0,
+          "category": "Economy",
+          "ticketPrice": 1599.99
         }
       ]
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "Europa",
-      "visited": "92435824",
+      "visited": 92435824,
       "background": "planet.jpg",
       "themeColor": "brown",
       "page": "/destinations/4",
@@ -634,20 +914,75 @@
           "name": "Astris"
         },
         {
-          "name": "Silver Mountain"
+          "name": "Silver Mountain Valley"
         },
         {
-          "name": "Karison"
+          "name": "Kadon"
+        }
+      ],
+      "flights": [
+        {
+          "from": "International Spaceport, Phoenix",
+          "country": "USA",
+          "to": "Astris.",
+          "carrier": "Liberty Streamline",
+          "seatsAvailable": 89,
+          "departure": {
+            "time": {
+              "hours": 14,
+              "min": 0
+            },
+            "day": 27,
+            "month": "November",
+            "year": 2072
+          },
+          "arrival": {
+            "time": {
+              "hours": 10,
+              "min": 30
+            },
+            "day": 17,
+            "month": "November",
+            "year": 2075
+          },
+          "durationInMonths": 36,
+          "category": "First Class",
+          "ticketPrice": 49999.99
         },
         {
-          "name": "Green Arabia"
+          "from": "Stardragon Spaceport, Shenzhen",
+          "country": "China",
+          "to": "Astris.",
+          "carrier": "Essentia 23",
+          "seatsAvailable": 11,
+          "departure": {
+            "time": {
+              "hours": 16,
+              "min": 0
+            },
+            "day": 3,
+            "month": "December",
+            "year": 2072
+          },
+          "arrival": {
+            "time": {
+              "hours": 19,
+              "min": 30
+            },
+            "day": 6,
+            "month": "December",
+            "year": 2075
+          },
+          "durationInMonths": 36,
+          "category": "First Class",
+          "ticketPrice": 51999.99
         }
       ]
     },
     {
-      "id": "5",
+      "id": 5,
       "name": "Venus",
-      "visited": "80435823",
+      "visited": 80435823,
       "background": "venus.jpg",
       "themeColor": "brown",
       "page": "/destinations/5",
@@ -667,10 +1002,10 @@
       ]
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Earth",
       "info": "Earth is the third planet from the Sun, and for millions of years, was the only planet capable of inhabiting human life. It is the home of humanity, and the birthplace of the galaxy's most colorful cultures.",
-      "visited": "2352190",
+      "visited": 429252190,
       "background": "earth-2.jpg",
       "themeColor": "green",
       "page": "/destinations/2",
@@ -690,11 +1025,12 @@
       ]
     },
     {
-      "id": "6",
+      "id": 6,
       "name": "Sango",
-      "visited": "1767891",
+      "info": "Previously known as NNO-894.82, Sango is an exoplanet that is home to flowing rivers and high valleys, a handful of colonies and a sparse population. Its core burns brightly and gives the planet a fiery glow, but its surface is cool and its atmosphere fresh and serene, making it a great place to retire to.",
+      "visited": 100767891,
       "background": "sango.jpg",
-      "themeColor": "blue",
+      "themeColor": "#fd9037",
       "page": "/destinations/6",
       "cities": [
         {
@@ -703,31 +1039,130 @@
         {
           "name": "Saltwater District"
         }
-      ]
-    },
-    {
-      "id": "7",
-      "name": "Jupiter",
-      "visited": "40133211",
-      "background": "jupiter.jpg",
-      "themeColor": "blue",
-      "page": "/destinations/7",
-      "cities": [
+      ],
+      "flights": [
         {
-          "name": "Havannah City"
+          "from": "International Spaceport, Phoenix",
+          "country": "USA",
+          "to": "Spaceport Site, Thunderstone",
+          "carrier": "Sango Express",
+          "seatsAvailable": 8919,
+          "departure": {
+            "time": {
+              "hours": 24,
+              "min": 0
+            },
+            "day": 19,
+            "month": "January",
+            "year": 2072
+          },
+          "arrival": {
+            "time": {
+              "hours": 0,
+              "min": 30
+            },
+            "day": 16,
+            "month": "January",
+            "year": 2077
+          },
+          "durationInMonths": 60,
+          "category": "Economy",
+          "ticketPrice": 29999.99
         },
         {
-          "name": "Orizon"
+          "from": "Stardragon Spaceport, Shenzhen",
+          "country": "China",
+          "to": "Spaceport Site, Thunderstone",
+          "carrier": "Chinese Aeroways",
+          "seatsAvailable": 17019,
+          "departure": {
+            "time": {
+              "hours": 10,
+              "min": 0
+            },
+            "day": 17,
+            "month": "March",
+            "year": 2072
+          },
+          "arrival": {
+            "time": {
+              "hours": 10,
+              "min": 30
+            },
+            "day": 16,
+            "month": "March",
+            "year": 2077
+          },
+          "durationInMonths": 60,
+          "category": "Economy",
+          "ticketPrice": 28999.99
+        },
+        {
+          "from": "Aderonu Adelaja Spaceport, Abeokuta",
+          "country": "Nigeria",
+          "to": "Spaceport Site, Thunderstone",
+          "carrier": "Thunderline SH508B",
+          "seatsAvailable": 4903,
+          "departure": {
+            "time": {
+              "hours": 14,
+              "min": 0
+            },
+            "day": 31,
+            "month": "June",
+            "year": 2073
+          },
+          "arrival": {
+            "time": {
+              "hours": 10,
+              "min": 45
+            },
+            "day": 1,
+            "month": "February",
+            "year": 2078
+          },
+          "durationInMonths": 60,
+          "category": "Economy",
+          "ticketPrice": 29199.99
+        },
+        {
+          "from": "International Spaceport, Phoenix",
+          "country": "USA",
+          "to": "Spaceport Site, Thunderstone",
+          "carrier": "Sango Express",
+          "seatsAvailable": 11473,
+          "departure": {
+            "time": {
+              "hours": 24,
+              "min": 0
+            },
+            "day": 19,
+            "month": "January",
+            "year": 2079
+          },
+          "arrival": {
+            "time": {
+              "hours": 0,
+              "min": 30
+            },
+            "day": 16,
+            "month": "January",
+            "year": 2084
+          },
+          "durationInMonths": 60,
+          "category": "Economy",
+          "ticketPrice": 29999.99
         }
       ]
     },
     {
-      "id": "8",
+      "id": 7,
       "name": "Hela",
-      "visited": "137492025",
+      "info": "Hela is the fifth planet in the Kalad Solar System, and the seventh largest in the Mily Way. It has three moons and rings made from stardust, rock and ice.",
+      "visited": 1372025,
       "background": "hela.jpg",
       "themeColor": "pink",
-      "page": "/destinations/8",
+      "page": "/destinations/7",
       "cities": [
         {
           "name": "Adan Redas"
@@ -736,32 +1171,6 @@
           "name": "New Washington"
         }
       ]
-    }
-  ],
-  "spacecrafts": [
-    {
-      "name": "Ajala-C6G3"
-    },
-    {
-      "name": "Red Hermes A928"
-    },
-    {
-      "name": "BEYONDER"
-    },
-    {
-      "name": "Infinity-II"
-    },
-    {
-      "name": "Infinity-III"
-    },
-    {
-      "name": "Silver Star"
-    },
-    {
-      "name": "Aero American 776"
-    },
-    {
-      "name": "The Iron Bubble"
     }
   ]
 }
