@@ -1,196 +1,767 @@
 {
-    "destinations": [{
-            "id": "3",
-            "name": "Mars",
-            "info": "Mars is the seventh largest in our solar system and the Earth's smaller, colder neighbour. It contains the largest extra-terrestrial human population, with engineered valleys and beautiful sceneries. ",
-            "visited": "125435823",
-            "background": "mars-3.jpg",
-            "themeColor": "red",
-            "page": "/destinations/3",
-            "attractions": [{
-                    "name": "Colony A1"
-                },
-                {
-                    "name": "Eden"
-                },
-                {
-                    "name": "Colony B7"
-                },
-                {
-                    "name": "Red Beijing"
-                },
-                {
-                    "name": "Colony V3X"
-                },
-                {
-                    "name": "Red Abuja"
-                },
-                {
-                    "name": "Red Paris"
-                },
-                {
-                    "name": "Red London"
-                },
-                {
-                    "name": "Aeris"
-                }
-            ]
+  "destinations": [
+    {
+      "id": "3",
+      "name": "Mars",
+      "info": "Mars is the seventh largest in our solar system and the Earth's smaller, colder neighbour. It contains the largest extra-terrestrial human population, with engineered valleys and beautiful sceneries. ",
+      "visited": "125435823",
+      "background": "mars-3.jpg",
+      "themeColor": "#d65f00",
+      "page": "/destinations/3",
+      "cities": [
+        {
+          "name": "Colony A1"
         },
         {
-            "id": "1",
-            "name": "Luna",
-            "info": "Luna, formally known as the Moon, is the Earth's only natural satellite, and the fifth largest in the Solar system, containing the second largest population of humans outside Earth.",
-            "visited": "292415886",
-            "background": "moon.jpg",
-            "themeColor": "grey",
-            "page": "/destinations/1",
-            "attractions": [{
-                    "name": "Palestone S.S.C"
-                },
-                {
-                    "name": "Resilience"
-                },
-                {
-                    "name": "Lunaria"
-                },
-                {
-                    "name": "Azurfa"
-                }
-            ]
+          "name": "Eden"
         },
         {
-            "id": "4",
-            "name": "Europa",
-            "visited": "92435824",
-            "background": "planet.jpg",
-            "themeColor": "brown",
-            "page": "/destinations/4",
-            "attractions": [{
-                    "name": "Astris"
-                },
-                {
-                    "name": "Silver Mountain"
-                },
-                {
-                    "name": "Karison"
-                },
-                {
-                    "name": "Green Arabia"
-                }
-            ]
+          "name": "Colony B7"
         },
         {
-            "id": "5",
-            "name": "Venus",
-            "visited": "80435823",
-            "background": "venus.jpg",
-            "themeColor": "brown",
-            "page": "/destinations/5",
-            "attractions": [{
-                    "name": "Bluestreak"
-                },
-                {
-                    "name": "Excellence City"
-                },
-                {
-                    "name": "Colony 78"
-                },
-                {
-                    "name": "Graywood"
-                }
-            ]
+          "name": "Red Beijing"
         },
         {
-            "id": "2",
-            "name": "Earth",
-            "info": "Earth is the third planet from the Sun, and for millions of years, was the only planet capable of inhabiting human life. It is the home of humanity, and the birthplace of the galaxy's most colorful cultures.",
-            "visited": "2352190",
-            "background": "earth-2.jpg",
-            "themeColor": "green",
-            "page": "/destinations/2",
-            "attractions": [{
-                    "name": "New York"
-                },
-                {
-                    "name": "London"
-                },
-                {
-                    "name": "Shanghai"
-                },
-                {
-                    "name": "New Delhi"
-                }
-            ]
+          "name": "V3 City"
         },
         {
-            "id": "6",
-            "name": "Sango",
-            "visited": "1767891",
-            "background": "sango.jpg",
-            "themeColor": "blue",
-            "page": "/destinations/6",
-            "attractions": [{
-                    "name": "Thunderstone"
-                },
-                {
-                    "name": "Saltwater District"
-                }
-            ]
+          "name": "Red Abuja"
         },
         {
-            "id": "7",
-            "name": "Jupiter",
-            "visited": "40133211",
-            "background": "jupiter.jpg",
-            "themeColor": "blue",
-            "page": "/destinations/7",
-            "attractions": [{
-                    "name": "Havannah City"
-                },
-                {
-                    "name": "Orizon"
-                }
-            ]
+          "name": "Red Paris"
         },
         {
-            "id": "8",
-            "name": "Hela",
-            "visited": "137492025",
-            "background": "hela.jpg",
-            "themeColor": "pink",
-            "page": "/destinations/8",
-            "attractions": [{
-                    "name": "Adan Redas"
-                },
-                {
-                    "name": "New Washington"
-                }
-            ]
+          "name": "Red London"
+        },
+        {
+          "name": "Aeria"
         }
-    ],
-    "spacecrafts": [{
-            "name": "Ajala-C6G3"
+      ],
+      "flights": [
+        {
+          "from": "International Spaceport, Phoenix",
+          "country": "USA",
+          "to": "AUSP, V3 City.",
+          "carrier": "The Iron Bubble",
+          "seatsAvailable": 411,
+          "departure": {
+            "time": {
+              "hours": 10,
+              "min": 45
+            },
+            "day": 25,
+            "month": "November",
+            "year": 2072
+          },
+          "arrival": {
+            "time": {
+              "hours": 14,
+              "min": 30
+            },
+            "day": 28,
+            "month": "July",
+            "year": 2073
+          },
+          "durationInMonths": 8,
+          "category": "Economy",
+          "ticketPrice": 8999.99
         },
         {
-            "name": "Red Hermes A928"
+          "from": "Aderonu Adelaja Spaceport, Abeokuta",
+          "country": "Nigeria",
+          "to": "Azurfa Spaceport, Red Abuja",
+          "carrier": "Ajala-C6G3",
+          "seatsAvailable": 1864,
+          "departure": {
+            "time": {
+              "hours": 6,
+              "min": 0
+            },
+            "day": 17,
+            "month": "December",
+            "year": 2072
+          },
+          "arrival": {
+            "time": {
+              "hours": 10,
+              "min": 15
+            },
+            "day": 22,
+            "month": "August",
+            "year": 2073
+          },
+          "durationInMonths": 8,
+          "category": "Economy",
+          "ticketPrice": 8699.99
         },
         {
-            "name": "BEYONDER"
+          "from": "YRSP, Harbin",
+          "country": "China",
+          "to": "Newfoundhope Spaceport, Eden",
+          "carrier": "BEYONDER 864",
+          "seatsAvailable": 20,
+          "departure": {
+            "time": {
+              "hours": 17,
+              "min": 30
+            },
+            "day": 15,
+            "month": "November",
+            "year": 2072
+          },
+          "arrival": {
+            "time": {
+              "hours": 14,
+              "min": 30
+            },
+            "day": 20,
+            "month": "March",
+            "year": 2073
+          },
+          "durationInMonths": 4,
+          "category": "First Class",
+          "ticketPrice": 19499.99
         },
         {
-            "name": "Infinity-II"
+          "from": "North Jakarta Spaceport, North Jakarta",
+          "country": "Indonesia",
+          "to": "AUSP, V3 City.",
+          "carrier": "Hermes",
+          "seatsAvailable": 939,
+          "departure": {
+            "time": {
+              "hours": 11,
+              "min": 0
+            },
+            "day": 9,
+            "month": "January",
+            "year": 2073
+          },
+          "arrival": {
+            "time": {
+              "hours": 20,
+              "min": 45
+            },
+            "day": 12,
+            "month": "September",
+            "year": 2073
+          },
+          "durationInMonths": 8,
+          "category": "Economy",
+          "ticketPrice": 9199.99
         },
         {
-            "name": "Infinity-III"
+          "from": "Aakaash Raaja Spaceport, Pune",
+          "country": "India",
+          "to": "RUSP, Aeria.",
+          "carrier": "Infinity II",
+          "seatsAvailable": 6,
+          "departure": {
+            "time": {
+              "hours": 5,
+              "min": 0
+            },
+            "day": 11,
+            "month": "January",
+            "year": 2073
+          },
+          "arrival": {
+            "time": {
+              "hours": 4,
+              "min": 15
+            },
+            "day": 14,
+            "month": "April",
+            "year": 2073
+          },
+          "durationInMonths": 4,
+          "category": "First Class",
+          "ticketPrice": 21999.99
         },
         {
-            "name": "Silver Star"
+          "from": "International Spaceport, Phoenix",
+          "country": "USA",
+          "to": "Newfoundhope Spaceport, Eden",
+          "carrier": "Astro American 776",
+          "seatsAvailable": 41,
+          "departure": {
+            "time": {
+              "hours": 9,
+              "min": 30
+            },
+            "day": 19,
+            "month": "October",
+            "year": 2072
+          },
+          "arrival": {
+            "time": {
+              "hours": 22,
+              "min": 15
+            },
+            "day": 17,
+            "month": "February",
+            "year": 2073
+          },
+          "durationInMonths": 4,
+          "category": "First Class",
+          "ticketPrice": 21199.99
         },
         {
-            "name": "Aero American 776"
+          "from": "Silverline Spaceport, Gangtok",
+          "country": "India",
+          "to": "AUSP, V3 City.",
+          "carrier": "Infinity IV Lite",
+          "seatsAvailable": 899,
+          "departure": {
+            "time": {
+              "hours": 8,
+              "min": 0
+            },
+            "day": 10,
+            "month": "February",
+            "year": 2073
+          },
+          "arrival": {
+            "time": {
+              "hours": 4,
+              "min": 30
+            },
+            "day": 28,
+            "month": "September",
+            "year": 2073
+          },
+          "durationInMonths": 7,
+          "category": "Economy",
+          "ticketPrice": 11999.99
         },
         {
-            "name": "The Iron Bubble"
+          "from": "Stardragon Spaceport, Shenzhen",
+          "country": "China",
+          "to": "Azurfa Spaceport, Red Abuja",
+          "carrier": "Faraday's Flyer",
+          "seatsAvailable": 1411,
+          "departure": {
+            "time": {
+              "hours": 9,
+              "min": 30
+            },
+            "day": 15,
+            "month": "November",
+            "year": 2072
+          },
+          "arrival": {
+            "time": {
+              "hours": 8,
+              "min": 30
+            },
+            "day": 18,
+            "month": "July",
+            "year": 2073
+          },
+          "durationInMonths": 8,
+          "category": "Economy",
+          "ticketPrice": 8399.99
+        },
+        {
+          "from": "Yagarin Spaceport, Yekaterinburg",
+          "country": "Russia",
+          "to": "Arthur Robert Spaceport, New Paris",
+          "carrier": "BEYONDER 279",
+          "seatsAvailable": 158,
+          "departure": {
+            "time": {
+              "hours": 13,
+              "min": 0
+            },
+            "day": 19,
+            "month": "January",
+            "year": 2073
+          },
+          "arrival": {
+            "time": {
+              "hours": 19,
+              "min": 30
+            },
+            "day": 23,
+            "month": "August",
+            "year": 2073
+          },
+          "durationInMonths": 8,
+          "category": "Economy",
+          "ticketPrice": 9099.99
+        },
+        {
+          "from": "Aderonu Adelaja Spaceport, Abeokuta",
+          "country": "Nigeria",
+          "to": "Azurfa Spaceport, Red Abuja",
+          "carrier": "Ajala-C6G3",
+          "seatsAvailable": 1890,
+          "departure": {
+            "time": {
+              "hours": 10,
+              "min": 0
+            },
+            "day": 28,
+            "month": "June",
+            "year": 2074
+          },
+          "arrival": {
+            "time": {
+              "hours": 15,
+              "min": 45
+            },
+            "day": 30,
+            "month": "February",
+            "year": 2075
+          },
+          "durationInMonths": 8,
+          "category": "Economy",
+          "ticketPrice": 8699.99
+        },
+        {
+          "from": "YRSP, Harbin",
+          "country": "China",
+          "to": "Newfoundhope Spaceport, Eden",
+          "carrier": "BEYONDER 864",
+          "seatsAvailable": 101,
+          "departure": {
+            "time": {
+              "hours": 10,
+              "min": 0
+            },
+            "day": 23,
+            "month": "September",
+            "year": 2073
+          },
+          "arrival": {
+            "time": {
+              "hours": 5,
+              "min": 30
+            },
+            "day": 29,
+            "month": "January",
+            "year": 2074
+          },
+          "durationInMonths": 4,
+          "category": "First Class",
+          "ticketPrice": 19499.99
+        },
+        {
+          "from": "Aakaash Raaja Spaceport, Pune",
+          "country": "India",
+          "to": "RUSP, Aeria.",
+          "carrier": "Infinity II",
+          "seatsAvailable": 52,
+          "departure": {
+            "time": {
+              "hours": 13,
+              "min": 0
+            },
+            "day": 10,
+            "month": "October",
+            "year": 2073
+          },
+          "arrival": {
+            "time": {
+              "hours": 14,
+              "min": 0
+            },
+            "day": 19,
+            "month": "February",
+            "year": 2073
+          },
+          "durationInMonths": 4,
+          "category": "First Class",
+          "ticketPrice": 21999.99
+        },
+        {
+          "from": "Stardragon Spaceport, Shenzhen",
+          "country": "China",
+          "to": "Azurfa Spaceport, Red Abuja",
+          "carrier": "Faraday's Flyer",
+          "seatsAvailable": 3662,
+          "departure": {
+            "time": {
+              "hours": 12,
+              "min": 30
+            },
+            "day": 15,
+            "month": "June",
+            "year": 2074
+          },
+          "arrival": {
+            "time": {
+              "hours": 10,
+              "min": 0
+            },
+            "day": 19,
+            "month": "February",
+            "year": 2075
+          },
+          "durationInMonths": 8,
+          "category": "Economy",
+          "ticketPrice": 8399.99
+        },
+        {
+          "from": "International Spaceport, Phoenix",
+          "country": "USA",
+          "to": "AUSP, V3 City.",
+          "carrier": "The Iron Bubble",
+          "seatsAvailable": 9028,
+          "departure": {
+            "time": {
+              "hours": 11,
+              "min": 45
+            },
+            "day": 26,
+            "month": "June",
+            "year": 2074
+          },
+          "arrival": {
+            "time": {
+              "hours": 15,
+              "min": 30
+            },
+            "day": 29,
+            "month": "February",
+            "year": 2075
+          },
+          "durationInMonths": 8,
+          "category": "Economy",
+          "ticketPrice": 8999.99
+        },
+        {
+          "from": "Aderonu Adelaja Spaceport, Abeokuta",
+          "country": "Nigeria",
+          "to": "Azurfa Spaceport, Red Abuja",
+          "carrier": "Ajala-C6G3",
+          "seatsAvailable": 3864,
+          "departure": {
+            "time": {
+              "hours": 5,
+              "min": 0
+            },
+            "day": 11,
+            "month": "September",
+            "year": 2075
+          },
+          "arrival": {
+            "time": {
+              "hours": 11,
+              "min": 15
+            },
+            "day": 14,
+            "month": "May",
+            "year": 2075
+          },
+          "durationInMonths": 8,
+          "category": "Economy",
+          "ticketPrice": 8699.99
         }
-    ]
+      ]
+    },
+    {
+      "id": "1",
+      "name": "Luna",
+      "info": "Luna, formally known as the Moon, is the Earth's only natural satellite, and the fifth largest in the Solar system, containing the second largest population of humans outside Earth.",
+      "visited": "292415886",
+      "background": "moon.jpg",
+      "themeColor": "grey",
+      "page": "/destinations/1",
+      "cities": [
+        {
+          "name": "Palerock S.S.C"
+        },
+        {
+          "name": "Resilience"
+        },
+        {
+          "name": "Lunaria"
+        }
+      ],
+      "flights": [
+        {
+          "from": "Stardragon Spaceport, Shenzhen",
+          "country": "China",
+          "to": "Armstrong Interstellar Spaceport, Lunaria.",
+          "carrier": "Moonmetal T72",
+          "seatsAvailable": 901,
+          "departure": {
+            "time": {
+              "hours": 9,
+              "min": 45
+            },
+            "day": 10,
+            "month": "November",
+            "year": 2072
+          },
+          "arrival": {
+            "time": {
+              "hours": 11,
+              "min": 30
+            },
+            "day": 13,
+            "month": "November",
+            "year": 2072
+          },
+          "durationInMonths": 0,
+          "category": "Economy",
+          "ticketPrice": 1499.99
+        },
+        {
+          "from": "International Spaceport, Phoenix",
+          "country": "USA",
+          "to": "Armstrong Interstellar Spaceport, Lunaria.",
+          "carrier": "Babylon-D898",
+          "seatsAvailable": 111,
+          "departure": {
+            "time": {
+              "hours": 4,
+              "min": 50
+            },
+            "day": 13,
+            "month": "November",
+            "year": 2072
+          },
+          "arrival": {
+            "time": {
+              "hours": 19,
+              "min": 30
+            },
+            "day": 17,
+            "month": "November",
+            "year": 2072
+          },
+          "durationInMonths": 0,
+          "category": "Economy",
+          "ticketPrice": 1199.99
+        },
+        {
+          "from": "Aakaash Raaja Spaceport, Pune",
+          "country": "India",
+          "to": "United International Spaceport, Lunaria.",
+          "carrier": "Moonmetal T79",
+          "seatsAvailable": 234,
+          "departure": {
+            "time": {
+              "hours": 12,
+              "min": 0
+            },
+            "day": 9,
+            "month": "December",
+            "year": 2072
+          },
+          "arrival": {
+            "time": {
+              "hours": 5,
+              "min": 30
+            },
+            "day": 13,
+            "month": "December",
+            "year": 2072
+          },
+          "durationInMonths": 0,
+          "category": "Economy",
+          "ticketPrice": 1399.99
+        },
+        {
+          "from": "Yagarin Spaceport, Yekaterinburg",
+          "country": "Russia",
+          "to": "United International Spaceport, Lunaria.",
+          "carrier": "Lightyear Pro",
+          "seatsAvailable": 10,
+          "departure": {
+            "time": {
+              "hours": 10,
+              "min": 0
+            },
+            "day": 24,
+            "month": "November",
+            "year": 2072
+          },
+          "arrival": {
+            "time": {
+              "hours": 1,
+              "min": 30
+            },
+            "day": 25,
+            "month": "November",
+            "year": 2072
+          },
+          "durationInMonths": 0,
+          "category": "First Class",
+          "ticketPrice": 4599.99
+        },
+        {
+          "from": "North Jakarta Spaceport, North Jakarta",
+          "country": "Indonesia",
+          "to": "New Moon Spaceport, Palerock SSC",
+          "carrier": "Nebula 4",
+          "seatsAvailable": 1200,
+          "departure": {
+            "time": {
+              "hours": 19,
+              "min": 0
+            },
+            "day": 30,
+            "month": "December",
+            "year": 2072
+          },
+          "arrival": {
+            "time": {
+              "hours": 11,
+              "min": 30
+            },
+            "day": 3,
+            "month": "January",
+            "year": 2073
+          },
+          "durationInMonths": 0,
+          "category": "Economy",
+          "ticketPrice": 1399.99
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Europa",
+      "visited": "92435824",
+      "background": "planet.jpg",
+      "themeColor": "brown",
+      "page": "/destinations/4",
+      "cities": [
+        {
+          "name": "Astris"
+        },
+        {
+          "name": "Silver Mountain"
+        },
+        {
+          "name": "Karison"
+        },
+        {
+          "name": "Green Arabia"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Venus",
+      "visited": "80435823",
+      "background": "venus.jpg",
+      "themeColor": "brown",
+      "page": "/destinations/5",
+      "cities": [
+        {
+          "name": "Bluestreak"
+        },
+        {
+          "name": "Excellence City"
+        },
+        {
+          "name": "Colony 78"
+        },
+        {
+          "name": "Graywood"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Earth",
+      "info": "Earth is the third planet from the Sun, and for millions of years, was the only planet capable of inhabiting human life. It is the home of humanity, and the birthplace of the galaxy's most colorful cultures.",
+      "visited": "2352190",
+      "background": "earth-2.jpg",
+      "themeColor": "green",
+      "page": "/destinations/2",
+      "cities": [
+        {
+          "name": "New York"
+        },
+        {
+          "name": "London"
+        },
+        {
+          "name": "Shanghai"
+        },
+        {
+          "name": "New Delhi"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Sango",
+      "visited": "1767891",
+      "background": "sango.jpg",
+      "themeColor": "blue",
+      "page": "/destinations/6",
+      "cities": [
+        {
+          "name": "Thunderstone"
+        },
+        {
+          "name": "Saltwater District"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Jupiter",
+      "visited": "40133211",
+      "background": "jupiter.jpg",
+      "themeColor": "blue",
+      "page": "/destinations/7",
+      "cities": [
+        {
+          "name": "Havannah City"
+        },
+        {
+          "name": "Orizon"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Hela",
+      "visited": "137492025",
+      "background": "hela.jpg",
+      "themeColor": "pink",
+      "page": "/destinations/8",
+      "cities": [
+        {
+          "name": "Adan Redas"
+        },
+        {
+          "name": "New Washington"
+        }
+      ]
+    }
+  ],
+  "spacecrafts": [
+    {
+      "name": "Ajala-C6G3"
+    },
+    {
+      "name": "Red Hermes A928"
+    },
+    {
+      "name": "BEYONDER"
+    },
+    {
+      "name": "Infinity-II"
+    },
+    {
+      "name": "Infinity-III"
+    },
+    {
+      "name": "Silver Star"
+    },
+    {
+      "name": "Aero American 776"
+    },
+    {
+      "name": "The Iron Bubble"
+    }
+  ]
 }

@@ -3,7 +3,7 @@
   <main>
     <Section
       format="left"
-      heading="The No. 1 Interstellar Agency in the Galaxy."
+      heading="The No. 1 Space Travel Agency in the Galaxy."
       action="Get Started"
       text="Sojourner is a company dedicated to getting you to where you want to be in style and safety. Join our crews on an exciting journey across space, traversing
           realities at previously unimagined speeds."

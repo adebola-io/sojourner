@@ -41,6 +41,7 @@ export default {
         this.item = data;
         document.title = `${this.item.name}`;
       });
+    console.log(this.item.flights);
   },
 };
 </script>
