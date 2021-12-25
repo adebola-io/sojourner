@@ -907,7 +907,7 @@
       "name": "Europa",
       "visited": 92435824,
       "background": "planet.jpg",
-      "themeColor": "brown",
+      "themeColor": "#727576",
       "page": "/destinations/4",
       "cities": [
         {
@@ -984,7 +984,7 @@
       "name": "Venus",
       "visited": 80435823,
       "background": "venus.jpg",
-      "themeColor": "brown",
+      "themeColor": "#a97300",
       "page": "/destinations/5",
       "cities": [
         {
@@ -1007,7 +1007,7 @@
       "info": "Earth is the third planet from the Sun, and for millions of years, was the only planet capable of inhabiting human life. It is the home of humanity, and the birthplace of the galaxy's most colorful cultures.",
       "visited": 429252190,
       "background": "earth-2.jpg",
-      "themeColor": "green",
+      "themeColor": "#109ff7",
       "page": "/destinations/2",
       "cities": [
         {
@@ -1030,7 +1030,7 @@
       "info": "Previously known as NNO-894.82, Sango is an exoplanet that is home to flowing rivers and high valleys, a handful of colonies and a sparse population. Its core burns brightly and gives the planet a fiery glow, but its surface is cool and its atmosphere fresh and serene, making it a great place to retire to.",
       "visited": 100767891,
       "background": "sango.jpg",
-      "themeColor": "#fd9037",
+      "themeColor": "#ffb480",
       "page": "/destinations/6",
       "cities": [
         {
