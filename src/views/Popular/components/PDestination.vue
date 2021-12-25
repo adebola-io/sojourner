@@ -1,5 +1,6 @@
 <template>
   <li
+    ref="container"
     class="popular-item-container"
     :style="{
       animation: `popular-item ${(isReadyValue + 1) * 300}ms`,
@@ -32,6 +33,12 @@ export default {
       background: require("../../../assets/blank.jpg"),
     };
   },
+  mounted() {
+    this.$refs.container.style.setProperty(
+      "--hoverThemeColor",
+      this.item.themeColor
+    );
+  },
 };
 </script>
 <style scoped>
@@ -40,11 +47,12 @@ export default {
   overflow: hidden;
   list-style: none;
   border-radius: 9px;
+  --hoverThemeColor: var(--themeColor);
   transition-duration: 300ms;
   animation: popular-item 300ms;
 }
 .popular-item-container:hover {
-  box-shadow: 0 0 15px 0 var(--themeColor);
+  box-shadow: 0 0 15px 0 var(--hoverThemeColor);
 }
 .popular-item {
   display: flex;
