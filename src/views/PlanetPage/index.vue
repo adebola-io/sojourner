@@ -13,7 +13,7 @@
     <div class="visit-btn-space">
       <router-link
         class="visit-btn"
-        :style="{ backgroundColor: item.themeColor }"
+        :style="{ backgroundColor: item.themeColor, color: item.secColor }"
         to="#"
         >Visit</router-link
       >
@@ -77,7 +77,8 @@ main {
 }
 .visit-btn-space {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
 }
 .visit-btn,
@@ -85,15 +86,15 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 31%;
+  width: 50%;
   height: 51px;
-  margin: 0 5%;
-  color: black;
+  margin: 2% 0;
   text-align: center;
   border-radius: 33px;
   text-decoration: none;
 }
 .wishlist-btn {
+  color: black;
   background: var(--themeColor);
 }
 .info {

@@ -7,6 +7,7 @@
       "visited": 125435823,
       "background": "mars-3.jpg",
       "themeColor": "#d65f00",
+      "secColor": "white",
       "page": "/destinations/3",
       "cities": [
         {
@@ -467,6 +468,7 @@
       "visited": 292415886,
       "background": "moon.jpg",
       "themeColor": "grey",
+      "secColor": "black",
       "page": "/destinations/1",
       "cities": [
         {
@@ -908,6 +910,7 @@
       "visited": 92435824,
       "background": "planet.jpg",
       "themeColor": "#727576",
+      "secColor": "black",
       "page": "/destinations/4",
       "cities": [
         {
@@ -985,6 +988,7 @@
       "visited": 80435823,
       "background": "venus.jpg",
       "themeColor": "#a97300",
+      "secColor": "white",
       "page": "/destinations/5",
       "cities": [
         {
@@ -1031,6 +1035,7 @@
       "visited": 100767891,
       "background": "sango.jpg",
       "themeColor": "#ffb480",
+      "secColor": "black",
       "page": "/destinations/6",
       "cities": [
         {
@@ -1162,6 +1167,7 @@
       "visited": 1372025,
       "background": "hela.jpg",
       "themeColor": "pink",
+      "secColor": "black",
       "page": "/destinations/7",
       "cities": [
         {
