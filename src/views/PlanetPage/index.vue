@@ -14,16 +14,37 @@
       <router-link
         class="visit-btn"
         :style="{ backgroundColor: item.themeColor, color: item.secColor }"
-        to="#"
-        >Visit</router-link
+        :to="`/flights/${item.name.toLowerCase()}`"
+        >See Flights</router-link
       >
       <router-link to="#" class="wishlist-btn">Add to Wishlist</router-link>
     </div>
     <p class="info">{{ item.info }}</p>
+    <section class="gallery-space">
+      <h3 class="gallery-space-header">Gallery</h3>
+      <div class="gallery-container">
+        <div class="gallery">
+          <button
+            v-for="(image, index) in item.gallery"
+            :key="index"
+            class="view-image-clicker"
+            :style="{ animation: `expand-in ${300 * (index + 1)}ms` }"
+          >
+            <div
+              class="view-image"
+              :style="{
+                backgroundImage: `url('${require(`../../assets/gallery/${image.src}`)}')`,
+              }"
+            ></div>
+          </button>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
 <script>
+import "./animations.css";
 export default {
   name: "PlanetPage",
   props: {
@@ -86,7 +107,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 60%;
   height: 51px;
   margin: 2% 0;
   text-align: center;
@@ -99,12 +120,44 @@ main {
 }
 .info {
   width: 94%;
+  margin-bottom: 25px;
   padding: 0 3%;
   font-size: 10pt;
   text-align: center;
   animation: fade-in 450ms;
 }
-
+.gallery-space {
+  height: 200px;
+  width: 97%;
+  margin-left: 3%;
+}
+.gallery-space-header {
+  margin: 0;
+  height: 10%;
+  font-weight: normal;
+}
+.gallery-container {
+  height: 90%;
+  width: 100%;
+  overflow-x: scroll;
+}
+.gallery {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.view-image-clicker {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+.view-image {
+  height: 130px;
+  width: 130px;
+  margin-right: 20px;
+  background-size: cover;
+  background-position: center;
+}
 @keyframes come-up {
   0% {
     transform: translateY(100%);

@@ -459,6 +459,28 @@
           "category": "Economy",
           "ticketPrice": 8699.99
         }
+      ],
+      "gallery": [
+        {
+          "name": "Outer view",
+          "src": "mars/mars.jpg"
+        },
+        {
+          "name": "Aeria",
+          "src": "mars/aeria.jpg"
+        },
+        {
+          "name": "Eden",
+          "src": "mars/eden.jpg"
+        },
+        {
+          "name": "Colony a1",
+          "src": "mars/a1.jpg"
+        },
+        {
+          "name": "V3 City",
+          "src": "mars/v3.jpg"
+        }
       ]
     },
     {
@@ -902,7 +924,8 @@
           "category": "Economy",
           "ticketPrice": 1599.99
         }
-      ]
+      ],
+      "gallery": []
     },
     {
       "id": 4,
