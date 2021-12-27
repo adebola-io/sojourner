@@ -13,7 +13,7 @@ To start dev server, use:
 npm run serve
 ```
 
-To start json server/fake rest api, use :
+To start json server/fake REST API, use :
 ```
 npm run json
 ```
@@ -28,6 +28,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
