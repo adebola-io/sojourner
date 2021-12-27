@@ -1,5 +1,5 @@
 <template>
-  <main :key="id">
+  <main :key="$route.name + ($route.params.planetID || '')">
     <section
       class="background"
       :style="{
@@ -78,20 +78,27 @@ export default {
     };
   },
   methods: {
-    start() {
+    start(callback = () => {}) {
       fetch(`/api/destinations/${this.$route.params.planetID}`)
         .then((res) => res.json())
         .then((data) => {
           this.item = data;
           document.title = `${this.item.name}`;
-          this.id = this.$route.params.planetID;
-          document.querySelector("html").scrollTop = 0;
+        })
+        .then(() => {
+          callback();
         });
+    },
+    update() {
+      this.start(() => {
+        this.id = this.$route.params.planetID;
+        document.querySelector("html").scrollTop = 0;
+      });
     },
   },
   watch: {
     "$route.params.planetID": function () {
-      this.start();
+      this.update();
     },
   },
   created() {
