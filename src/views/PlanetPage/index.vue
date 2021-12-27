@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main :key="id">
     <section
       class="background"
       :style="{
@@ -40,6 +40,27 @@
         </div>
       </div>
     </section>
+    <section class="suggestions-space">
+      <h3 class="suggestions-space-header">People also visit</h3>
+      <div class="suggestions-container">
+        <div class="suggestions">
+          <router-link
+            exact
+            v-for="(relatedDest, index) in item.related"
+            :key="index"
+            :to="`/destinations/${relatedDest.id}`"
+            class="view-image-clicker"
+            :style="{
+              animation: `expand-in ${300 * (index + 1)}ms`,
+              border: `2px solid ${relatedDest.themeColor}`,
+              backgroundImage: `url('${require(`../../assets/planets/${relatedDest.background}`)}')`,
+            }"
+          >
+            <p class="suggestion-name">{{ relatedDest.name }}</p>
+          </router-link>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -53,23 +74,35 @@ export default {
   data() {
     return {
       item: {},
+      id: this.planetID,
     };
   },
+  methods: {
+    start() {
+      fetch(`/api/destinations/${this.$route.params.planetID}`)
+        .then((res) => res.json())
+        .then((data) => {
+          this.item = data;
+          document.title = `${this.item.name}`;
+          this.id = this.$route.params.planetID;
+          document.querySelector("html").scrollTop = 0;
+        });
+    },
+  },
+  watch: {
+    "$route.params.planetID": function () {
+      this.start();
+    },
+  },
   created() {
-    fetch(`/api/destinations/${this.planetID}`)
-      .then((res) => res.json())
-      .then((data) => {
-        this.item = data;
-        document.title = `${this.item.name}`;
-      });
-    console.log(this.item.flights);
+    this.start();
   },
 };
 </script>
 
 <style lang="css" scoped>
 main {
-  height: 900px;
+  height: fit-content;
 }
 .background {
   display: flex;
@@ -126,37 +159,69 @@ main {
   text-align: center;
   animation: fade-in 450ms;
 }
+.suggestions-space,
 .gallery-space {
   height: 200px;
   width: 97%;
   margin-left: 3%;
+  margin-bottom: 35px;
 }
+
+.suggestions-space-header,
 .gallery-space-header {
   margin: 0;
   height: 10%;
   font-weight: normal;
 }
+.suggestions-container,
 .gallery-container {
   height: 90%;
   width: 100%;
   overflow-x: scroll;
 }
+.suggestions,
 .gallery {
   display: flex;
   align-items: center;
   height: 100%;
+  width: fit-content;
 }
 .view-image-clicker {
+  height: 130px;
+  width: 130px;
+  margin-right: 20px;
   padding: 0;
   border: none;
   background-color: transparent;
 }
-.view-image {
-  height: 130px;
-  width: 130px;
-  margin-right: 20px;
+.suggestions > .view-image-clicker {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 150px;
+  border: 2px solid white;
+  border-radius: 10px;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
+}
+.view-image {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+/* .suggestions > .view-image-clicker > .view-image {
+  height: 86.666%;
+} */
+.suggestions > .view-image-clicker > p {
+  height: 20%;
+  margin: 0;
+  font-family: inherit;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-image: linear-gradient(0deg, black, transparent);
 }
 @keyframes come-up {
   0% {

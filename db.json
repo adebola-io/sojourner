@@ -481,6 +481,26 @@
           "name": "V3 City",
           "src": "mars/v3.jpg"
         }
+      ],
+      "related": [
+        {
+          "name": "Luna",
+          "id": 1,
+          "background": "moon.jpg",
+          "themeColor": "grey"
+        },
+        {
+          "name": "Earth",
+          "id": 2,
+          "background": "earth-2.jpg",
+          "themeColor": "#109ff7"
+        },
+        {
+          "name": "Venus",
+          "id": 5,
+          "background": "venus.jpg",
+          "themeColor": "#a97300"
+        }
       ]
     },
     {
@@ -925,7 +945,27 @@
           "ticketPrice": 1599.99
         }
       ],
-      "gallery": []
+      "gallery": [],
+      "related": [
+        {
+          "name": "Mars",
+          "id": 3,
+          "background": "mars-3.jpg",
+          "themeColor": "#d65f00"
+        },
+        {
+          "name": "Earth",
+          "id": 2,
+          "background": "earth-2.jpg",
+          "themeColor": "#109ff7"
+        },
+        {
+          "name": "Venus",
+          "id": 5,
+          "background": "venus.jpg",
+          "themeColor": "#a97300"
+        }
+      ]
     },
     {
       "id": 4,

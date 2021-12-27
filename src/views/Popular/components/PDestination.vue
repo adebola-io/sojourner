@@ -8,6 +8,7 @@
     }"
   >
     <router-link
+      exact
       :to="item.page"
       class="popular-item"
       :style="{
