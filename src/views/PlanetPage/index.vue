@@ -1,5 +1,5 @@
 <template>
-  <main :key="$route.name + ($route.params.planetID || '')">
+  <main v-if="item.ready">
     <section
       class="background"
       :style="{
@@ -14,7 +14,7 @@
       <router-link
         class="visit-btn"
         :style="{ backgroundColor: item.themeColor, color: item.secColor }"
-        :to="`/flights/${item.name.toLowerCase()}`"
+        :to="`/destinations/${planetID}/flights`"
         >See Flights</router-link
       >
       <router-link to="#" class="wishlist-btn">Add to Wishlist</router-link>
@@ -73,12 +73,12 @@ export default {
   },
   data() {
     return {
-      item: {},
+      item: { ready: false },
       id: this.planetID,
     };
   },
   methods: {
-    start(callback = () => {}) {
+    start() {
       fetch(`/api/destinations/${this.$route.params.planetID}`)
         .then((res) => res.json())
         .then((data) => {
@@ -86,21 +86,15 @@ export default {
           document.title = `${this.item.name}`;
         })
         .then(() => {
-          callback();
+          this.item.ready = true;
         });
     },
-    update() {
-      this.start(() => {
-        this.id = this.$route.params.planetID;
-        document.querySelector("html").scrollTop = 0;
-      });
-    },
   },
-  watch: {
-    "$route.params.planetID": function () {
-      this.update();
-    },
-  },
+  // watch: {
+  //   "$route.params.planetID": function () {
+  //     this.start();
+  //   },
+  // },
   created() {
     this.start();
   },
@@ -151,6 +145,8 @@ main {
   height: 51px;
   margin: 2% 0;
   text-align: center;
+  color: black;
+  background-color: var(--themeColor);
   border-radius: 33px;
   text-decoration: none;
 }

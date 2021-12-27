@@ -41,6 +41,7 @@
       "flights": [
         {
           "from": "International Spaceport, Phoenix",
+          "city": "Phoenix",
           "country": "USA",
           "to": "AUSP, V3 City.",
           "carrier": "The Iron Bubble",
@@ -69,6 +70,7 @@
         },
         {
           "from": "Aderonu Adelaja Spaceport, Abeokuta",
+          "city": "Abeokuta",
           "country": "Nigeria",
           "to": "Azurfa Spaceport, Red Abuja",
           "carrier": "Ajala-C6G3",
@@ -97,6 +99,7 @@
         },
         {
           "from": "YRSP, Harbin",
+          "city": "Harbin",
           "country": "China",
           "to": "Newfoundhope Spaceport, Eden",
           "carrier": "BEYONDER 864",
@@ -125,6 +128,7 @@
         },
         {
           "from": "North Jakarta Spaceport, North Jakarta",
+          "city": "Jakarta",
           "country": "Indonesia",
           "to": "AUSP, V3 City.",
           "carrier": "Hermes",
@@ -153,6 +157,7 @@
         },
         {
           "from": "Aakaash Raaja Spaceport, Pune",
+          "city": "Pune",
           "country": "India",
           "to": "RUSP, Aeria.",
           "carrier": "Infinity II",
@@ -181,6 +186,7 @@
         },
         {
           "from": "International Spaceport, Phoenix",
+          "city": "Phoenix",
           "country": "USA",
           "to": "Newfoundhope Spaceport, Eden",
           "carrier": "Astro American 776",
@@ -209,6 +215,7 @@
         },
         {
           "from": "Silverline Spaceport, Gangtok",
+          "city": "Gangtok",
           "country": "India",
           "to": "AUSP, V3 City.",
           "carrier": "Infinity IV Lite",
@@ -237,6 +244,7 @@
         },
         {
           "from": "Stardragon Spaceport, Shenzhen",
+          "city": "Shenzhen",
           "country": "China",
           "to": "Azurfa Spaceport, Red Abuja",
           "carrier": "Faraday's Flyer",
@@ -265,6 +273,7 @@
         },
         {
           "from": "Yagarin Spaceport, Yekaterinburg",
+          "city": "Yekaterinburg",
           "country": "Russia",
           "to": "Arthur Robert Spaceport, New Paris",
           "carrier": "BEYONDER 279",
@@ -293,6 +302,7 @@
         },
         {
           "from": "Aderonu Adelaja Spaceport, Abeokuta",
+          "city": "Abeokuta",
           "country": "Nigeria",
           "to": "Azurfa Spaceport, Red Abuja",
           "carrier": "Ajala-C6G3",
@@ -321,6 +331,7 @@
         },
         {
           "from": "YRSP, Harbin",
+          "city": "Harbin",
           "country": "China",
           "to": "Newfoundhope Spaceport, Eden",
           "carrier": "BEYONDER 864",
@@ -349,6 +360,7 @@
         },
         {
           "from": "Aakaash Raaja Spaceport, Pune",
+          "city": "Pune",
           "country": "India",
           "to": "RUSP, Aeria.",
           "carrier": "Infinity II",
@@ -377,6 +389,7 @@
         },
         {
           "from": "Stardragon Spaceport, Shenzhen",
+          "city": "Shenzhen",
           "country": "China",
           "to": "Azurfa Spaceport, Red Abuja",
           "carrier": "Faraday's Flyer",
@@ -405,6 +418,7 @@
         },
         {
           "from": "International Spaceport, Phoenix",
+          "city": "Phoenix",
           "country": "USA",
           "to": "AUSP, V3 City.",
           "carrier": "The Iron Bubble",
@@ -433,6 +447,7 @@
         },
         {
           "from": "Aderonu Adelaja Spaceport, Abeokuta",
+          "city": "Abeokuta",
           "country": "Nigeria",
           "to": "Azurfa Spaceport, Red Abuja",
           "carrier": "Ajala-C6G3",
@@ -526,6 +541,7 @@
       "flights": [
         {
           "from": "Stardragon Spaceport, Shenzhen",
+          "city": "Shenzhen",
           "country": "China",
           "to": "Armstrong Interstellar Spaceport, Lunaria.",
           "carrier": "Moonmetal T72",
@@ -554,6 +570,7 @@
         },
         {
           "from": "International Spaceport, Phoenix",
+          "city": "Phoenix",
           "country": "USA",
           "to": "Armstrong Interstellar Spaceport, Lunaria.",
           "carrier": "Babylon-D898",
@@ -582,6 +599,7 @@
         },
         {
           "from": "Aakaash Raaja Spaceport, Pune",
+          "city": "Pune",
           "country": "India",
           "to": "United International Spaceport, Lunaria.",
           "carrier": "Moonmetal T79",
@@ -610,6 +628,7 @@
         },
         {
           "from": "Yagarin Spaceport, Yekaterinburg",
+          "city": "Yekaterinburg",
           "country": "Russia",
           "to": "United International Spaceport, Lunaria.",
           "carrier": "Lightyear Pro",
@@ -638,6 +657,7 @@
         },
         {
           "from": "North Jakarta Spaceport, North Jakarta",
+          "city": "Jakarta",
           "country": "Indonesia",
           "to": "New Moon Spaceport, Palerock SSC",
           "carrier": "Nebula 4",
@@ -666,6 +686,7 @@
         },
         {
           "from": "Silverline Spaceport, Gangtok",
+          "city": "Gangtok",
           "country": "India",
           "to": "United International Spaceport, Lunaria.",
           "carrier": "Moonmetal Elite",
@@ -694,6 +715,7 @@
         },
         {
           "from": "New Lunar Spaceport, Kobe",
+          "city": "Kobe",
           "country": "Japan",
           "to": "Armstrong Interstellar Spaceport, Lunaria.",
           "carrier": "Faraday's Flyer II-AA7",
@@ -722,6 +744,7 @@
         },
         {
           "from": "Stardragon Spaceport, Shenzhen",
+          "city": "Shenzhen",
           "country": "China",
           "to": "Armstrong Interstellar Spaceport, Lunaria.",
           "carrier": "Chinese Aeroways",
@@ -750,6 +773,7 @@
         },
         {
           "from": "International Spaceport, Phoenix",
+          "city": "Phoenix",
           "country": "USA",
           "to": "New Moon Spaceport, Palerock SSC",
           "carrier": "Nebula 7",
@@ -778,6 +802,7 @@
         },
         {
           "from": "Aakaash Raaja Spaceport, Pune",
+          "city": "Pune",
           "country": "India",
           "to": "Armstrong Interstellar Spaceport, Lunaria.",
           "carrier": "Golden Bird Y52",
@@ -806,6 +831,7 @@
         },
         {
           "from": "Stardragon Spaceport, Shenzhen",
+          "city": "Shenzhen",
           "country": "China",
           "to": "Armstrong Interstellar Spaceport, Lunaria.",
           "carrier": "Moonmetal T72",
@@ -834,6 +860,7 @@
         },
         {
           "from": "Aderonu Adelaja Spaceport, Abeokuta",
+          "city": "Abeokuta",
           "country": "Nigeria",
           "to": "New Moon Spaceport, Palerock SSC",
           "carrier": "IkemAstro 992",
@@ -862,6 +889,7 @@
         },
         {
           "from": "NNSP, Calabar.",
+          "city": "Calabar",
           "country": "Nigeria",
           "to": "United International Spaceport, Lunaria.",
           "carrier": "IkemAstro 145",
@@ -890,6 +918,7 @@
         },
         {
           "from": "International Spaceport, Phoenix",
+          "city": "Phoenix",
           "country": "USA",
           "to": "Armstrong Interstellar Spaceport, Lunaria.",
           "carrier": "Babylon-D898",
@@ -918,6 +947,7 @@
         },
         {
           "from": "Yagarin Spaceport, Yekaterinburg",
+          "city": "Yekaterinburg",
           "country": "Russia",
           "to": "United International Spaceport, Lunaria.",
           "carrier": "The Scarlet Star",
@@ -989,6 +1019,7 @@
       "flights": [
         {
           "from": "International Spaceport, Phoenix",
+          "city": "Phoenix",
           "country": "USA",
           "to": "Astris.",
           "carrier": "Liberty Streamline",
@@ -1017,6 +1048,7 @@
         },
         {
           "from": "Stardragon Spaceport, Shenzhen",
+          "city": "Shenzhen",
           "country": "China",
           "to": "Astris.",
           "carrier": "Essentia 23",
@@ -1112,6 +1144,7 @@
       "flights": [
         {
           "from": "International Spaceport, Phoenix",
+          "city": "Phoenix",
           "country": "USA",
           "to": "Spaceport Site, Thunderstone",
           "carrier": "Sango Express",
@@ -1140,6 +1173,7 @@
         },
         {
           "from": "Stardragon Spaceport, Shenzhen",
+          "city": "Shenzhen",
           "country": "China",
           "to": "Spaceport Site, Thunderstone",
           "carrier": "Chinese Aeroways",
@@ -1168,6 +1202,7 @@
         },
         {
           "from": "Aderonu Adelaja Spaceport, Abeokuta",
+          "city": "Abeokuta",
           "country": "Nigeria",
           "to": "Spaceport Site, Thunderstone",
           "carrier": "Thunderline SH508B",
@@ -1196,6 +1231,7 @@
         },
         {
           "from": "International Spaceport, Phoenix",
+          "city": "Phoenix",
           "country": "USA",
           "to": "Spaceport Site, Thunderstone",
           "carrier": "Sango Express",

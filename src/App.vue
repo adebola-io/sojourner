@@ -15,7 +15,9 @@
     :showDropDown="showDropDown"
     @close-side-bar="closeSb"
   ></Sidebar>
-  <router-view></router-view>
+  <router-view
+    :key="$route.name + ($route.params.planetID || '')"
+  ></router-view>
   <Footer></Footer>
 </template>
 

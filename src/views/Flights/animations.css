@@ -1,0 +1,5 @@
+@keyframes flight-appear {
+    0% {
+     transform: translate(50%);   
+    }
+}
