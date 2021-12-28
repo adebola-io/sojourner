@@ -16,7 +16,7 @@ module.exports = {
     config
       .plugin('html')
       .tap(args => {
-        args[0].template = '/path/to/index.html'
+        args[0].template = './index.html'
         return args
       })
   }
