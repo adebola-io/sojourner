@@ -1,12 +1,12 @@
 {
   "name": "sojourner",
   "version": "0.1.0",
-  "start-date": "10th Dec, 2021",
+  "start-date": "12th Dec, 2021",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "json": "json-server --watch db.json --port 5001",
+    "json:server": "json-server --watch db.json --port 5001",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
