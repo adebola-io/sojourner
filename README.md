@@ -35,7 +35,7 @@ npm run lint
 ```
 ---------
 
-### Disclaimer:
+#### Disclaimer:
 
 
 None of the images used in this project are mine. They were all sourced from the internet.
