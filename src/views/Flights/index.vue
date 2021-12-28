@@ -1,6 +1,9 @@
 <template>
   <main v-if="ready">
-    <h3 class="flights-heading">Flights to {{ name }}</h3>
+    <div class="flights-heading">
+      <FilterBtn :color="themeColor" />
+      <h3>Flights to {{ name }}</h3>
+    </div>
     <section class="flights-all">
       <router-link
         v-for="(flight, index) in sortedFlights"
@@ -43,10 +46,14 @@
 
 <script>
 import "./animations.css";
+import FilterBtn from "./components/FilterBtn";
 export default {
   name: "Flights",
   props: {
     planetID: String,
+  },
+  components: {
+    FilterBtn,
   },
   data() {
     return {
@@ -213,7 +220,14 @@ main {
   padding: 0 3%;
 }
 .flights-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+}
+.flights-heading > h3 {
+  margin-left: auto;
+  margin-right: auto;
 }
 .flights-all {
   margin-bottom: 40px;
