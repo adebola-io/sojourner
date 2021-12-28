@@ -10,3 +10,14 @@ module.exports = {
     },
   },
 };
+
+module.exports = {
+  chainWebpack: config => {
+    config
+      .plugin('html')
+      .tap(args => {
+        args[0].template = '/path/to/index.html'
+        return args
+      })
+  }
+}
