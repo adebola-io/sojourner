@@ -1,5 +1,14 @@
 <template>
-  <button ref="button" :color="color" class="filterbtn">
+  <button
+    @click="
+      () => {
+        this.$emit('click');
+      }
+    "
+    ref="button"
+    :color="color"
+    class="filterbtn"
+  >
     <div class="track">
       <div class="knob knob1"></div>
     </div>

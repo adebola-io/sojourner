@@ -1,7 +1,14 @@
 <template>
+  <FilterPage
+    v-if="ready"
+    @apply="applyFilters"
+    :open="filterPageIsOpen"
+    :color="themeColor"
+    :secColor="secColor"
+  />
   <main v-if="ready">
     <div class="flights-heading">
-      <FilterBtn :color="themeColor" />
+      <FilterBtn @click="openFilterPage" :color="themeColor" />
       <h3>Flights to {{ name }}</h3>
     </div>
     <section class="flights-all">
@@ -47,6 +54,7 @@
 <script>
 import "./animations.css";
 import FilterBtn from "./components/FilterBtn";
+import FilterPage from "./components/FilterPage";
 export default {
   name: "Flights",
   props: {
@@ -54,16 +62,25 @@ export default {
   },
   components: {
     FilterBtn,
+    FilterPage,
   },
   data() {
     return {
       name: "",
       themeColor: "var(--themeColor)",
+      secColor: "",
       ready: false,
       flights: [],
+      filterPageIsOpen: false,
     };
   },
   methods: {
+    openFilterPage() {
+      this.filterPageIsOpen = true;
+    },
+    applyFilters() {
+      this.filterPageIsOpen = false;
+    },
     parsePrice: (price = 0.0) => {
       let str = price.toString();
       let returnedString = "",
@@ -204,6 +221,7 @@ export default {
       .then((res) => res.json())
       .then((data) => {
         this.flights = data.flights;
+        this.secColor = data.secColor;
         this.sortedFlights = this.sortFlightsbyDate(data.flights);
         this.name = data.name;
         this.themeColor = data.themeColor;
