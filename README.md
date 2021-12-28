@@ -5,7 +5,7 @@ This repo contains the data and configuration for [Sojourner](https://sojourner.
 ### About this project
 Sojourner is part of a personal portfolio, I'm trying to improve my skills as a developer, so all feedback is appreciated.
 
-Find an issue with the project or an area that could use improvement? Report it in the [issues section](github.com/adebola-xyz/sojourner/issues), or email me at adebolaakomolafe@gmail.com
+Find an issue with the project or an area that could use improvement? Report it in the [issues section](https://github.com/adebola-xyz/sojourner/issues), or email me at adebolaakomolafe@gmail.com
 
 Also, feel free to use this project as you wish. To set up its dependencies, use:
 ```
