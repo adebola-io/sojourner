@@ -122,7 +122,7 @@ export default {
           : timeObj.day % 10 === 2 && parseInt(timeObj.day / 10) !== 1
           ? "st"
           : "th") +
-        ", " +
+        " " +
         timeObj.month +
         ", " +
         timeObj.year
