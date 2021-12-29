@@ -1,12 +1,19 @@
 <template>
   <FilterPage
     v-if="ready"
+    @close="closeFilterPage"
+    @clear-filters="clearFilters"
     @apply="applyFilters"
     :open="filterPageIsOpen"
+    :priceBoundaries="priceBoundaries"
     :color="themeColor"
     :secColor="secColor"
+    :countries="countries"
   />
-  <main v-if="ready">
+  <main
+    v-if="ready"
+    :style="{ filter: `brightness(${filterPageIsOpen ? '0.5' : '1'})` }"
+  >
     <div class="flights-heading">
       <FilterBtn @click="openFilterPage" :color="themeColor" />
       <h3>Flights to {{ name }}</h3>
@@ -19,7 +26,7 @@
         class="flight"
         :style="{
           border: `2px solid ${themeColor}`,
-          animation: `flight-appear ${200 * (index / 2 + 1)}ms`,
+          animation: `flight-appear ${300 * (index / 2 + 1)}ms`,
         }"
       >
         <div class="flight-info">
@@ -70,17 +77,84 @@ export default {
       themeColor: "var(--themeColor)",
       secColor: "",
       ready: false,
-      flights: [],
+      sortedFlights: [],
+      countries: [],
+      priceBoundaries: { lowestPrice: 0.0, highestPrice: 0.0 },
       filterPageIsOpen: false,
+      reftoPage: "",
     };
   },
   methods: {
     openFilterPage() {
       this.filterPageIsOpen = true;
     },
-    applyFilters() {
+    closeFilterPage() {
       this.filterPageIsOpen = false;
     },
+    /**
+     * Reset filters that have been previously added.
+     */
+    clearFilters() {
+      this.ready = false;
+      this.filterPageIsOpen = false;
+      fetch(`/api/destinations/${this.planetID}`)
+        .then((res) => res.json())
+        .then((data) => {
+          this.sortedFlights = this.sortFlightsbyDate(data.flights);
+          this.ready = true;
+        });
+    },
+    /**
+     * Apply selected filters from the filter page component.
+     */
+    applyFilters(filterParams) {
+      this.filterPageIsOpen = false;
+      this.ready = false;
+      fetch(`/api/destinations/${this.planetID}`)
+        .then((res) => res.json())
+        .then((data) => {
+          if (filterParams.sortFlightsBy !== "Earliest") {
+            this.sortedFlights = data.flights.sort((a, b) => {
+              if (filterParams.sortFlightsBy === "Seats Available") {
+                return b.seatsAvailable - a.seatsAvailable;
+              } else if (
+                filterParams.sortFlightsBy === "Price (Lowest to Highest)"
+              ) {
+                return a.ticketPrice - b.ticketPrice;
+              }
+            });
+          } else if (filterParams.sortFlightsBy === "Earliest") {
+            this.sortedFlights = this.sortFlightsbyDate(data.flights);
+          }
+          if (
+            filterParams.countrySelected &&
+            filterParams.countrySelected !== "All"
+          ) {
+            this.sortedFlights = this.sortedFlights.filter((flight) => {
+              return flight.country === filterParams.countrySelected;
+            });
+          }
+          if (filterParams.lowerPriceLimit > 0) {
+            this.sortedFlights = this.sortedFlights.filter((flight) => {
+              return flight.ticketPrice > filterParams.lowerPriceLimit;
+            });
+          }
+          if (filterParams.upperPriceLimit > 0) {
+            this.sortedFlights = this.sortedFlights.filter((flight) => {
+              return flight.ticketPrice < filterParams.upperPriceLimit;
+            });
+          }
+          if (filterParams.category && filterParams.category !== "Any") {
+            this.sortedFlights = this.sortedFlights.filter((flight) => {
+              return flight.category === filterParams.category;
+            });
+          }
+          this.ready = true;
+        });
+    },
+    /**
+     * Rewrite Ticket prices with commas.
+     */
     parsePrice: (price = 0.0) => {
       let str = price.toString();
       let returnedString = "",
@@ -128,39 +202,7 @@ export default {
         timeObj.year
       );
     },
-    sortFlightsbyDate(
-      flights = [
-        {
-          from: "",
-          city: "",
-          country: "",
-          to: "",
-          carrier: "",
-          seatsAvailable: 0,
-          departure: {
-            time: {
-              hours: 0,
-              min: 0,
-            },
-            day: 1,
-            month: "January",
-            year: 2000,
-          },
-          arrival: {
-            time: {
-              hours: 0,
-              min: 0,
-            },
-            day: 0,
-            month: "January",
-            year: 2000,
-          },
-          durationInMonths: 0,
-          category: "",
-          ticketPrice: 0.0,
-        },
-      ]
-    ) {
+    sortFlightsbyDate(flights = []) {
       for (let i = 0; i < flights.length; i++) {
         switch (flights[i].departure.month) {
           case "January":
@@ -215,16 +257,33 @@ export default {
           return a.departure.year - b.departure.year;
         });
     },
+    getPriceBoundaries(flights = []) {
+      return {
+        lowestPrice: parseInt(
+          flights.sort((a, b) => a.ticketPrice - b.ticketPrice)[0].ticketPrice
+        ),
+        highestPrice: parseInt(
+          flights.sort((a, b) => b.ticketPrice - a.ticketPrice)[0].ticketPrice
+        ),
+      };
+    },
   },
   created() {
     fetch(`/api/destinations/${this.planetID}`)
       .then((res) => res.json())
       .then((data) => {
-        this.flights = data.flights;
         this.secColor = data.secColor;
+        this.priceBoundaries = this.getPriceBoundaries(data.flights);
         this.sortedFlights = this.sortFlightsbyDate(data.flights);
         this.name = data.name;
         this.themeColor = data.themeColor;
+        this.countries = [
+          ...new Set(
+            data.flights.map((flight) => {
+              return flight.country;
+            })
+          ),
+        ];
         document.title = `${data.name} - Flights`;
         this.ready = true;
       });
