@@ -37,7 +37,7 @@ const routes = [
     props: true,
   },
   {
-    path: "/flights/:flightID",
+    path: "/flights/:planetID/:flightID",
     name: "Flight",
     component: Flight,
     props: true,

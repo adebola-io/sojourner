@@ -22,7 +22,7 @@
       <router-link
         v-for="(flight, index) in sortedFlights"
         :key="index"
-        :to="`/flights/${flight.id}`"
+        :to="`/flights/${planetID}/${flight.id}`"
         class="flight"
         :style="{
           border: `2px solid ${themeColor}`,
@@ -33,13 +33,13 @@
           <h5>From:</h5>
           <h4 class="flight-from">{{ flight.from }}</h4>
           <span class="flight-date" :style="{ color: themeColor }">{{
-            parseDating(flight.departure)
+            stringifyDating(flight.departure)
           }}</span>
           <span class="seats">{{ flight.seatsAvailable }} seats left</span>
         </div>
         <div class="flight-price">
           <div class="flight-price-content">
-            ${{ parsePrice(flight.ticketPrice) }}
+            ${{ stringifyPrice(flight.ticketPrice) }}
           </div>
           <div class="class-marker-container">
             <div
@@ -62,6 +62,7 @@
 import "./animations.css";
 import FilterBtn from "./components/FilterBtn";
 import FilterPage from "./components/FilterPage";
+import { priceToString } from "../../utils";
 export default {
   name: "Flights",
   props: {
@@ -90,6 +91,9 @@ export default {
     },
     closeFilterPage() {
       this.filterPageIsOpen = false;
+    },
+    stringifyPrice: function (price) {
+      return priceToString(price);
     },
     /**
      * Reset filters that have been previously added.
@@ -152,26 +156,7 @@ export default {
           this.ready = true;
         });
     },
-    /**
-     * Rewrite Ticket prices with commas.
-     */
-    parsePrice: (price = 0.0) => {
-      let str = price.toString();
-      let returnedString = "",
-        counter = 0;
-      for (let i = str.length - 1; i > -1; i--) {
-        if (str[i] === ".") {
-          counter = 0;
-        } else if (counter === 3) {
-          (returnedString = "," + returnedString), (counter = 1);
-        } else {
-          counter++;
-        }
-        returnedString = str[i] + returnedString;
-      }
-      return returnedString;
-    },
-    parseDating(
+    stringifyDating(
       timeObj = {
         time: {
           hours: 0,

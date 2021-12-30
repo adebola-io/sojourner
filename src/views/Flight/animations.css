@@ -1,0 +1,11 @@
+@keyframes single-flight-page {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+}
+@keyframes flight-page-bg {
+    0%{
+        opacity: 0;
+    }
+}
