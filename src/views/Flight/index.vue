@@ -59,7 +59,9 @@
         <span name="category">{{ flight.category }}</span>
       </div>
     </section>
-    <div class="btn-space"><button class="book-btn">Book Flight</button></div>
+    <div class="btn-space">
+      <router-link to="/error" class="book-btn">Book Flight</router-link>
+    </div>
   </main>
 </template>
 
@@ -228,6 +230,7 @@ hr {
   font-weight: bold;
   font-size: 13pt;
   font-family: inherit;
+  text-decoration: none;
   background-color: var(--thColor);
 }
 .btn-space {
